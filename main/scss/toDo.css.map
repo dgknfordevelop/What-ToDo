@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;AAGD,AAAA,IAAI,CAAA;EACA,UAAU,EAAE,KAAK;EACjB,WAAW,EAAE,8BAA8B;CAC9C",
-    "sources": [
-        "toDo.scss"
-    ],
-    "names": [],
-    "file": "toDo.css"
-}
