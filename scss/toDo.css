@@ -25,7 +25,7 @@ html body {
 
 html body .note-container {
   width: 30vw;
-  height: 75vh;
+  max-height: 75vh;
   border-start-start-radius: 15px;
   border-start-end-radius: 15px;
   border-end-start-radius: 15px;
@@ -46,7 +46,7 @@ html body .note-container .note-add-section {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 12%;
+  height: 10vh;
   border-start-start-radius: 15px;
   border-start-end-radius: 15px;
   background-image: -webkit-gradient(linear, left top, right top, from(#000033), to(#4d004d));
@@ -60,8 +60,18 @@ html body .note-container .note-add-section .note-input {
 }
 
 html body .note-container .note-add-section .note-add-button {
-  background-color: red;
-  height: 55%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  height: 10vh;
   width: 20%;
   font-size: 1rem;
   text-align: center;
@@ -70,7 +80,7 @@ html body .note-container .note-add-section .note-add-button {
 
 html body .note-container .main-note-section {
   background-color: inherit;
-  height: 75%;
+  min-height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,57 +88,61 @@ html body .note-container .main-note-section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-html body .note-container .main-note-section .note-list-container {
-  background-color: red;
-  height: calc(100% - 4vh);
-  width: 100%;
-  -webkit-padding-before: 1vh;
-          padding-block-start: 1vh;
-  -webkit-padding-after: 1vh;
-          padding-block-end: 1vh;
-  overflow: auto;
-}
-
-html body .note-container .main-note-section .note-list-container .note-item {
+html body .note-container .main-note-section .note-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-margin-before: 1vh;
+          margin-block-start: 1vh;
+  -webkit-margin-after: 1vh;
+          margin-block-end: 1vh;
+}
+
+html body .note-container .main-note-section .note-line .note-item {
+  background-color: gray;
+  max-height: 60vh;
+  width: 90%;
+  -webkit-padding-start: 0.5rem;
+          padding-inline-start: 0.5rem;
+  text-align: left;
+}
+
+html body .note-container .main-note-section .note-line .note-control {
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
+}
+
+html body .note-container .main-note-section .note-line .note-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: gray;
-  max-height: calc(100% - 4vh);
-  width: 95%;
-  -webkit-padding-start: 0.5rem;
-          padding-inline-start: 0.5rem;
-  -webkit-margin-after: 1vh;
-          margin-block-end: 1vh;
-  overflow: auto;
-}
-
-html body .note-container .main-note-section .note-list-container .note-delete {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-margin-start: auto;
           margin-inline-start: auto;
-  -webkit-margin-end: 0.5vw;
-          margin-inline-end: 0.5vw;
-  -webkit-margin-after: auto;
-          margin-block-end: auto;
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
   cursor: pointer;
   text-transform: uppercase;
+  height: 3vh;
+  width: 1vw;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000033), to(#4d004d));
+  background-image: linear-gradient(to right, #000033, #4d004d);
+  color: white;
 }
 
-html body .note-container .main-note-section .delete-all-container {
+html body .note-container .delete-all-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,6 +154,12 @@ html body .note-container .main-note-section .delete-all-container {
           align-items: center;
   border-start-start-radius: 15px;
   border-start-end-radius: 15px;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
+  -webkit-margin-before: auto;
+          margin-block-start: auto;
   width: 10vw;
   height: 4vh;
   color: white;
@@ -150,7 +170,7 @@ html body .note-container .main-note-section .delete-all-container {
 
 html body .note-container .footer-section {
   background-color: yellow;
-  height: calc(100% - 87%);
+  height: 10vh;
   border-end-start-radius: 15px;
   border-end-end-radius: 15px;
   background-image: -webkit-gradient(linear, left top, right top, from(#000033), to(#4d004d));
