@@ -9,12 +9,12 @@ $linear-gradient: linear-gradient(to right, #000033, #4d004d);
 $radius: 15px;
 
 html {
-    font-size: 12px;
 
 
     body {
         min-height: 100vh;
-        font-family: 'Mochiy Pop P One', sans-serif;
+        font-family:  sans-serif;
+        font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -61,38 +61,38 @@ html {
 
             .main-note-section {
                 background-color: inherit;
-                min-height: 60vh;
+                height: calc(75vh - 24vh);
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                overflow: auto;
 
                 .note-line {
                     display: flex;
                     margin-block-start: 1vh;
                     margin-block-end: 1vh;
+                    width: 28vw;
 
                     .note-item {
+                        width: 100%;
                         background-color: gray;
-                        max-height: 60vh;
-                        width: 90%;
                         padding-inline-start: 0.5rem;
-                        text-align: left;
+                        word-break: break-all;
                     }
 
                     .note-control{
                         margin-inline-start: auto;
-                        margin-inline-end: auto;
                     }
 
                     .note-delete {
                         display: flex;
-                        align-items: center;
                         justify-content: center;
-                        margin-inline-start: auto;
-                        margin-inline-end: auto;
+                        align-items: flex-start;
                         cursor: pointer;
-                        text-transform: uppercase;
-                        height: 3vh;
+                        text-transform: lowercase;
+                        margin-inline-end:0.5rem ;
+                        margin-inline-start: 0.5rem;
+                        height: 2vh;
                         width: 1vw;
                         background-image: $linear-gradient;
                         color: white;
