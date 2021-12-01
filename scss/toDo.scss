@@ -6,30 +6,33 @@
 
 $box-shadow-color:hsl(240, 61%, 85%);
 $linear-gradient: linear-gradient(to right, #000033, #4d004d);
-$radius: 15px;
+$radius: 1.2vw;
 
 html {
-
+    font-size: 1.2vw;
 
     body {
         min-height: 100vh;
-        font-family:  sans-serif;
+        font-family: sans-serif;
         font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: 'Be Vietnam Pro', sans-serif;
 
         .note-container {
             width: 30vw;
-            max-height: 75vh;
+            max-height: 80vh;
             border-start-start-radius: $radius;
             border-start-end-radius: $radius;
             border-end-start-radius: $radius;
             border-end-end-radius: $radius;
-            box-shadow: -10px 10px 5px 2px $box-shadow-color;
+            box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw $box-shadow-color;
             background-color: #ffe6ff;
 
-            .note-add-section {
+
+
+            .header-note-section {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -40,9 +43,15 @@ html {
                 background-image: $linear-gradient;
 
                 .note-input {
+                    width: 75%;
                     height: 55%;
-                    width: 80%;
-                    border-right: none;
+                    font-size: 1.2vw;
+                    padding-inline-start: 0.5vw;
+                    margin-inline-start: auto;
+                    border-radius: $radius;
+                    border: none;
+                    outline: none;
+                    text-decoration: none;
                 }
 
                 .note-add-button {
@@ -51,13 +60,29 @@ html {
                     justify-content: center;
                     align-items: center;
                     color: white;
-                    height: 10vh;
                     width: 20%;
                     font-size: 1rem;
                     text-align: center;
                     cursor: pointer;
                 }
             }
+
+            .note-entry-heading {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-end-start-radius: $radius;
+                border-end-end-radius: $radius;
+                margin-inline-start: auto;
+                margin-inline-end: auto;
+                margin-block-start: auto;
+                width: 10vw;
+                height: 4vh;
+                color: white;
+                background-image: $linear-gradient;
+                cursor: pointer;
+            }
+
 
             .main-note-section {
                 background-color: inherit;
@@ -69,33 +94,39 @@ html {
 
                 .note-line {
                     display: flex;
-                    margin-block-start: 1vh;
+                    margin-block-start: 1.5vh;
                     margin-block-end: 1vh;
                     width: 28vw;
+                    min-height: 5vh;
+                    box-shadow: -0.5vw 0.1vw 0.1vw 0.1vw $box-shadow-color;
+                    background-color: #f2f2f2;
 
                     .note-item {
                         width: 100%;
-                        background-color: gray;
-                        padding-inline-start: 0.5rem;
+                        padding-block-start: 0.5vw;
+                        padding-inline-start: 0.5vw;
+                        min-height: 5vh;
                         word-break: break-all;
                     }
 
-                    .note-control{
-                        margin-inline-start: auto;
+                    .note-control {
+                        margin-block-start: auto;
+                        margin-block-end: auto;
+                        margin-inline-end: 0.5rem;
+                        margin-inline-start: 0.5rem;
                     }
 
                     .note-delete {
-                        display: flex;
-                        justify-content: center;
-                        align-items: flex-start;
                         cursor: pointer;
-                        text-transform: lowercase;
-                        margin-inline-end:0.5rem ;
+                        text-transform: uppercase;
+                        margin-block-start: auto;
+                        margin-block-end: auto;
+                        margin-inline-end: 0.5rem;
                         margin-inline-start: 0.5rem;
-                        height: 2vh;
+                        padding: 0.2vw;
                         width: 1vw;
-                        background-image: $linear-gradient;
-                        color: white;
+                        height: fit-content;
+                        
                     }
                 }
 
@@ -104,7 +135,7 @@ html {
 
             }
 
-            .delete-all-container {
+            .delete-all-button {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -118,13 +149,17 @@ html {
                 color: white;
                 background-image: $linear-gradient;
                 cursor: pointer;
+                transition-property: transform;
+                transition-duration: 0.1s;
+                &:hover{
+                    transform: scaleX(1.1);
+                }
 
             }
 
 
 
             .footer-section {
-                background-color: yellow;
                 height: 10vh;
                 border-end-start-radius: $radius;
                 border-end-end-radius: $radius;

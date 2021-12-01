@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/toDo.css">
     <title>What ToDo</title>
 </head>
@@ -13,16 +16,20 @@
 
     <div class="note-container">
 
-        <header class="note-add-section">
-            <input class="note-input">
-            <span class="note-add-button">add</span>
+        <header class="header-note-section">
+            <input class="note-input" spellcheck="false">
+            <span class="note-add-button">Add</span>
         </header>
+
+        <div class="note-entry-heading">
+            Your Notes
+        </div>
 
         <main class="main-note-section">
         </main>
 
-        <div class="delete-all-container">
-            <span class="delete-all-button">delete all</span>
+        <div class="delete-all-button">
+            Delete All
         </div>
 
 
@@ -32,8 +39,8 @@
     </div>
 
 
+    <script src="toDo.js"></script>
 </body>
 
-<script src="toDo.js"></script>
 
 </html>
