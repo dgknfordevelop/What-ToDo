@@ -2,12 +2,13 @@ let userInput = document.querySelector(".note-input");
 let addButton = document.querySelector(".note-add-button");
 let noteSection = document.querySelector(".main-note-section");
 let deleteAllButton = document.querySelector(".delete-all-button");
-let checkNote = document.queryCommandIndeterm(".note-control");
+let checkItem = document.querySelector(".note-check");
+let noteItem = document.querySelector("note-item");
 
 addButton.addEventListener("click", addNote);
 noteSection.addEventListener("click", deleteSingleNote);
 deleteAllButton.addEventListener("click", deleteAll);
-checkNote.addEventListener("click", noteControl);
+checkItem.addEventListener("onchange", checkNote)
 
 function addNote() {
 
@@ -17,18 +18,18 @@ function addNote() {
     } else {
         noteSection.innerHTML += `<div class="note-line">
         <div class="note-item">${userInput.value}</div>
-        <input type="checkbox" class="note-control">
-        <div class="note-delete">x</div></div>`
+        <input type="checkbox" class="note-check">
+        <div class="note-delete"><i class="far fa-trash-alt"></i></div></div>`
         userInput.value = "";
 
     }
 }
 
 function deleteSingleNote(e) {
-    if (e.target.className === "note-delete") {
+    if (e.target.className === "far fa-trash-alt") {
 
         if (confirm("Do you ant to delete this note?")) {
-            e.target.parentElement.remove();
+            e.target.parentElement.parentElement.remove();
         }
     }
 }
@@ -39,3 +40,6 @@ function deleteAll() {
     }
 }
 
+function checkNote(e){
+e.target.parentElement.style.backgroundColor = "red";
+}

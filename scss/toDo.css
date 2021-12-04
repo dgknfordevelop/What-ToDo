@@ -6,7 +6,43 @@
 }
 
 html {
-  font-size: 1.2vw;
+  font-size: 15px;
+}
+
+@media all and (max-width: 760px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 615px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media all and (max-width: 515px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media all and (max-width: 415px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media all and (max-width: 360px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media all and (min-width: 1300px) {
+  html {
+    font-size: 17px;
+  }
 }
 
 html body {
@@ -26,7 +62,7 @@ html body {
 }
 
 html body .note-container {
-  width: 30vw;
+  width: 35vw;
   max-height: 80vh;
   border-start-start-radius: 1.2vw;
   border-start-end-radius: 1.2vw;
@@ -35,6 +71,37 @@ html body .note-container {
   -webkit-box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
           box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
   background-color: #ffe6ff;
+}
+
+@media all and (max-width: 1000px) {
+  html body .note-container {
+    width: 40vw;
+  }
+}
+
+@media all and (max-width: 765px) {
+  html body .note-container {
+    width: 50vw;
+    -webkit-box-shadow: -1vw 0.9vw 0.3vw 0.3vw #c1c1f0;
+            box-shadow: -1vw 0.9vw 0.3vw 0.3vw #c1c1f0;
+  }
+}
+
+@media all and (max-width: 550px) {
+  html body .note-container {
+    width: 55vw;
+    max-height: 70vh;
+    -webkit-box-shadow: -1vw 1vw 0.5vw 0.5vw #c1c1f0;
+            box-shadow: -1vw 1vw 0.5vw 0.5vw #c1c1f0;
+  }
+}
+
+@media all and (max-width: 390px) {
+  html body .note-container {
+    width: 60vw;
+    -webkit-box-shadow: -1.2vw 1.2vw 0.7vw 0.7vw #c1c1f0;
+            box-shadow: -1.2vw 1.2vw 0.7vw 0.7vw #c1c1f0;
+  }
 }
 
 html body .note-container .header-note-section {
@@ -55,10 +122,16 @@ html body .note-container .header-note-section {
   background-image: linear-gradient(to right, #000033, #4d004d);
 }
 
+@media all and (max-width: 550px) {
+  html body .note-container .header-note-section {
+    height: 7vh;
+  }
+}
+
 html body .note-container .header-note-section .note-input {
   width: 75%;
   height: 55%;
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   -webkit-padding-start: 0.5vw;
           padding-inline-start: 0.5vw;
   -webkit-margin-start: auto;
@@ -67,6 +140,30 @@ html body .note-container .header-note-section .note-input {
   border: none;
   outline: none;
   text-decoration: none;
+}
+
+@media all and (max-width: 615px) {
+  html body .note-container .header-note-section .note-input {
+    font-size: 1.5rem;
+  }
+}
+
+@media all and (max-width: 515px) {
+  html body .note-container .header-note-section .note-input {
+    font-size: 1.7rem;
+  }
+}
+
+@media all and (max-width: 415px) {
+  html body .note-container .header-note-section .note-input {
+    font-size: 1.9rem;
+  }
+}
+
+@media all and (max-width: 360px) {
+  html body .note-container .header-note-section .note-input {
+    font-size: 2rem;
+  }
 }
 
 html body .note-container .header-note-section .note-add-button {
@@ -87,6 +184,30 @@ html body .note-container .header-note-section .note-add-button {
   cursor: pointer;
 }
 
+@media all and (max-width: 615px) {
+  html body .note-container .header-note-section .note-add-button {
+    font-size: 1.1rem;
+  }
+}
+
+@media all and (max-width: 515px) {
+  html body .note-container .header-note-section .note-add-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media all and (max-width: 415px) {
+  html body .note-container .header-note-section .note-add-button {
+    font-size: 1.3rem;
+  }
+}
+
+@media all and (max-width: 360px) {
+  html body .note-container .header-note-section .note-add-button {
+    font-size: 1.5rem;
+  }
+}
+
 html body .note-container .note-entry-heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,10 +220,7 @@ html body .note-container .note-entry-heading {
           align-items: center;
   border-end-start-radius: 1.2vw;
   border-end-end-radius: 1.2vw;
-  -webkit-margin-start: auto;
-          margin-inline-start: auto;
-  -webkit-margin-end: auto;
-          margin-inline-end: auto;
+  margin-inline: auto;
   -webkit-margin-before: auto;
           margin-block-start: auto;
   width: 10vw;
@@ -111,6 +229,13 @@ html body .note-container .note-entry-heading {
   background-image: -webkit-gradient(linear, left top, right top, from(#000033), to(#4d004d));
   background-image: linear-gradient(to right, #000033, #4d004d);
   cursor: pointer;
+}
+
+@media all and (max-width: 415px) {
+  html body .note-container .note-entry-heading {
+    height: 3vh;
+    width: 15vw;
+  }
 }
 
 html body .note-container .main-note-section {
@@ -129,58 +254,97 @@ html body .note-container .main-note-section {
   overflow: auto;
 }
 
+@media all and (max-width: 615px) {
+  html body .note-container .main-note-section {
+    font-size: 1.5rem;
+    height: 45vh;
+  }
+}
+
+@media all and (max-width: 515px) {
+  html body .note-container .main-note-section {
+    font-size: 1.6rem;
+  }
+}
+
+@media all and (max-width: 415px) {
+  html body .note-container .main-note-section {
+    font-size: 1.7rem;
+  }
+}
+
+@media all and (max-width: 360px) {
+  html body .note-container .main-note-section {
+    font-size: 1.8rem;
+  }
+}
+
 html body .note-container .main-note-section .note-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-margin-before: 1.5vh;
-          margin-block-start: 1.5vh;
-  -webkit-margin-after: 1vh;
-          margin-block-end: 1vh;
-  width: 28vw;
+  margin-block: 1vh;
+  width: 95%;
   min-height: 5vh;
   -webkit-box-shadow: -0.5vw 0.1vw 0.1vw 0.1vw #c1c1f0;
           box-shadow: -0.5vw 0.1vw 0.1vw 0.1vw #c1c1f0;
   background-color: #f2f2f2;
 }
 
+html body .note-container .main-note-section .note-line:first-child {
+  -webkit-margin-before: 5vh;
+          margin-block-start: 5vh;
+}
+
 html body .note-container .main-note-section .note-line .note-item {
-  width: 100%;
-  -webkit-padding-before: 0.5vw;
-          padding-block-start: 0.5vw;
-  -webkit-padding-start: 0.5vw;
-          padding-inline-start: 0.5vw;
-  min-height: 5vh;
+  -webkit-padding-before: 1vh;
+          padding-block-start: 1vh;
+  padding-inline: 0.5vw;
+  min-height: inherit;
   word-break: break-all;
 }
 
-html body .note-container .main-note-section .note-line .note-control {
-  -webkit-margin-before: auto;
-          margin-block-start: auto;
-  -webkit-margin-after: auto;
-          margin-block-end: auto;
-  -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem;
-  -webkit-margin-start: 0.5rem;
-          margin-inline-start: 0.5rem;
+html body .note-container .main-note-section .note-line .note-check {
+  margin-block: auto;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  -webkit-margin-end: 0.5vw;
+          margin-inline-end: 0.5vw;
+}
+
+@media all and (max-width: 615px) {
+  html body .note-container .main-note-section .note-line .note-check {
+    width: 15px;
+    height: 12px;
+  }
 }
 
 html body .note-container .main-note-section .note-line .note-delete {
   cursor: pointer;
   text-transform: uppercase;
-  -webkit-margin-before: auto;
-          margin-block-start: auto;
-  -webkit-margin-after: auto;
-          margin-block-end: auto;
-  -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem;
-  -webkit-margin-start: 0.5rem;
-          margin-inline-start: 0.5rem;
-  padding: 0.2vw;
-  width: 1vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  margin-block: auto;
+  padding: 0.5vw;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000033), to(#4d004d));
+  background-image: linear-gradient(to right, #000033, #4d004d);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media all and (max-width: 760px) {
+  html body .note-container .main-note-section .note-line .note-delete {
+    font-size: 13px;
+  }
+}
+
+html body .note-container .main-note-section .note-line .note-delete:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 html body .note-container .delete-all-button {
@@ -195,10 +359,7 @@ html body .note-container .delete-all-button {
           align-items: center;
   border-start-start-radius: 1.2vw;
   border-start-end-radius: 1.2vw;
-  -webkit-margin-start: auto;
-          margin-inline-start: auto;
-  -webkit-margin-end: auto;
-          margin-inline-end: auto;
+  margin-inline: auto;
   -webkit-margin-before: auto;
           margin-block-start: auto;
   width: 10vw;
@@ -220,11 +381,30 @@ html body .note-container .delete-all-button:hover {
           transform: scaleX(1.1);
 }
 
+@media all and (max-width: 415px) {
+  html body .note-container .delete-all-button {
+    height: 3vh;
+    width: 15vw;
+  }
+}
+
+@media all and (max-width: 350px) {
+  html body .note-container .delete-all-button {
+    height: 2.5vh;
+  }
+}
+
 html body .note-container .footer-section {
   height: 10vh;
   border-end-start-radius: 1.2vw;
   border-end-end-radius: 1.2vw;
   background-image: -webkit-gradient(linear, left top, right top, from(#000033), to(#4d004d));
   background-image: linear-gradient(to right, #000033, #4d004d);
+}
+
+@media all and (max-width: 550px) {
+  html body .note-container .footer-section {
+    height: 7vh;
+  }
 }
 /*# sourceMappingURL=toDo.css.map */

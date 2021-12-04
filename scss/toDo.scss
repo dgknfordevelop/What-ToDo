@@ -9,7 +9,27 @@ $linear-gradient: linear-gradient(to right, #000033, #4d004d);
 $radius: 1.2vw;
 
 html {
-    font-size: 1.2vw;
+    font-size: 15px;
+
+   
+    @media all and (max-width:760px){
+        font-size: 12px;
+    }
+    @media all and (max-width:615px){
+        font-size: 10px;
+    }
+    @media all and (max-width:515px){
+        font-size: 8px;
+    }
+    @media all and (max-width:415px){
+        font-size: 7px;
+    }
+    @media all and (max-width:360px){
+        font-size: 6px;
+    }
+    @media all and (min-width: 1300px){
+        font-size:17px;
+    }
 
     body {
         min-height: 100vh;
@@ -21,7 +41,7 @@ html {
         font-family: 'Be Vietnam Pro', sans-serif;
 
         .note-container {
-            width: 30vw;
+            width: 35vw;
             max-height: 80vh;
             border-start-start-radius: $radius;
             border-start-end-radius: $radius;
@@ -29,7 +49,27 @@ html {
             border-end-end-radius: $radius;
             box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw $box-shadow-color;
             background-color: #ffe6ff;
+            
+            @media all and (max-width: 1000px) {
+                width: 40vw;
+            }
+            @media all and (max-width: 765px) {
+                width: 50vw;
+                box-shadow: -1vw 0.9vw 0.3vw 0.3vw $box-shadow-color;
 
+            }
+            @media all and (max-width: 550px){
+                width: 55vw;
+                max-height: 70vh;
+                box-shadow: -1vw 1vw 0.5vw 0.5vw $box-shadow-color;
+
+            }
+            @media all and (max-width: 390px){
+                width: 60vw;
+                box-shadow: -1.2vw 1.2vw 0.7vw 0.7vw $box-shadow-color;
+
+            }
+    
 
 
             .header-note-section {
@@ -41,17 +81,32 @@ html {
                 border-start-start-radius: $radius;
                 border-start-end-radius: $radius;
                 background-image: $linear-gradient;
-
+                @media all and (max-width: 550px){
+                  height: 7vh;
+                }
                 .note-input {
                     width: 75%;
                     height: 55%;
-                    font-size: 1.2vw;
+                    font-size: 1.2rem;
                     padding-inline-start: 0.5vw;
                     margin-inline-start: auto;
                     border-radius: $radius;
                     border: none;
                     outline: none;
                     text-decoration: none;
+
+                    @media all and (max-width:615px){
+                        font-size: 1.5rem;
+                    }
+                    @media all and (max-width:515px){
+                        font-size: 1.7rem;
+                    }
+                    @media all and (max-width:415px){
+                        font-size: 1.9rem;
+                    }
+                    @media all and (max-width:360px){
+                        font-size: 2rem;
+                    }
                 }
 
                 .note-add-button {
@@ -64,7 +119,23 @@ html {
                     font-size: 1rem;
                     text-align: center;
                     cursor: pointer;
+
+                    @media all and (max-width:615px){
+                        font-size: 1.1rem;
+                    }
+                    @media all and (max-width:515px){
+                        font-size: 1.2rem;
+                    }
+                    @media all and (max-width:415px){
+                        font-size: 1.3rem;
+                    }
+                    @media all and (max-width:360px){
+                        font-size: 1.5rem;
+                    }
                 }
+
+                
+
             }
 
             .note-entry-heading {
@@ -73,14 +144,18 @@ html {
                 align-items: center;
                 border-end-start-radius: $radius;
                 border-end-end-radius: $radius;
-                margin-inline-start: auto;
-                margin-inline-end: auto;
+                margin-inline: auto;
                 margin-block-start: auto;
                 width: 10vw;
                 height: 4vh;
                 color: white;
                 background-image: $linear-gradient;
                 cursor: pointer;
+                @media all and (max-width:415px){
+                    height: 3vh;
+                    width: 15vw;
+                }
+             
             }
 
 
@@ -92,41 +167,71 @@ html {
                 align-items: flex-start;
                 overflow: auto;
 
+                @media all and (max-width:615px){
+                    font-size: 1.5rem;
+                    height: 45vh;
+                }
+                @media all and (max-width:515px){
+                    font-size: 1.6rem;
+                }
+                @media all and (max-width:415px){
+                    font-size: 1.7rem;
+                }
+                @media all and (max-width:360px){
+                    font-size: 1.8rem;
+                }
+
                 .note-line {
                     display: flex;
-                    margin-block-start: 1.5vh;
-                    margin-block-end: 1vh;
-                    width: 28vw;
+                    margin-block: 1vh;
+                    width: 95%;
                     min-height: 5vh;
                     box-shadow: -0.5vw 0.1vw 0.1vw 0.1vw $box-shadow-color;
                     background-color: #f2f2f2;
-
+                    &:first-child{
+                        margin-block-start: 5vh;
+                    }
+                   
                     .note-item {
-                        width: 100%;
-                        padding-block-start: 0.5vw;
-                        padding-inline-start: 0.5vw;
-                        min-height: 5vh;
+                        padding-block-start: 1vh;
+                        padding-inline: 0.5vw;
+                        min-height: inherit;
                         word-break: break-all;
                     }
 
-                    .note-control {
-                        margin-block-start: auto;
-                        margin-block-end: auto;
-                        margin-inline-end: 0.5rem;
-                        margin-inline-start: 0.5rem;
+                    
+
+                    .note-check {
+                        margin-block: auto;
+                        margin-inline-start: auto;
+                        margin-inline-end: 0.5vw;
+
+                        @media all and (max-width:615px){
+                            width: 15px;
+                            height: 12px;
+                        }
+                        
                     }
 
                     .note-delete {
                         cursor: pointer;
                         text-transform: uppercase;
-                        margin-block-start: auto;
-                        margin-block-end: auto;
-                        margin-inline-end: 0.5rem;
-                        margin-inline-start: 0.5rem;
-                        padding: 0.2vw;
-                        width: 1vw;
-                        height: fit-content;
+                        margin-block: auto;
+                        padding: 0.5vw;
+                        transition-property: transform;
+                        transition-duration: 0.2s;
+                        background-image: $linear-gradient;
+                        -webkit-background-clip: text;
+                        color: transparent;
                         
+                        @media all and (max-width:760px){
+                           font-size: 13px;
+                        }
+
+                        &:hover{
+                            transform: scale(0.9);
+                        }
+                    
                     }
                 }
 
@@ -141,8 +246,7 @@ html {
                 align-items: center;
                 border-start-start-radius: $radius;
                 border-start-end-radius: $radius;
-                margin-inline-start: auto;
-                margin-inline-end: auto;
+                margin-inline: auto;
                 margin-block-start: auto;
                 width: 10vw;
                 height: 4vh;
@@ -155,6 +259,15 @@ html {
                     transform: scaleX(1.1);
                 }
 
+                @media all and (max-width:415px){
+                    height: 3vh;
+                    width: 15vw;
+                }
+                
+                @media all and (max-width:350px){
+                    height: 2.5vh;
+                }
+
             }
 
 
@@ -164,6 +277,9 @@ html {
                 border-end-start-radius: $radius;
                 border-end-end-radius: $radius;
                 background-image: $linear-gradient;
+                @media all and (max-width: 550px){
+                    height: 7vh;
+                  }
             }
         }
     }
