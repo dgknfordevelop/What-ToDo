@@ -9,6 +9,12 @@ html {
   font-size: 15px;
 }
 
+@media all and (max-width: 960px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 @media all and (max-width: 760px) {
   html {
     font-size: 12px;
@@ -62,7 +68,7 @@ html body {
 }
 
 html body .note-container {
-  width: 35vw;
+  width: 40vw;
   max-height: 80vh;
   border-start-start-radius: 1.2vw;
   border-start-end-radius: 1.2vw;
@@ -75,30 +81,41 @@ html body .note-container {
 
 @media all and (max-width: 1000px) {
   html body .note-container {
-    width: 40vw;
+    width: 50vw;
   }
 }
 
 @media all and (max-width: 765px) {
   html body .note-container {
-    width: 50vw;
     -webkit-box-shadow: -1vw 0.9vw 0.3vw 0.3vw #c1c1f0;
             box-shadow: -1vw 0.9vw 0.3vw 0.3vw #c1c1f0;
   }
 }
 
-@media all and (max-width: 550px) {
+@media all and (max-width: 650px) {
   html body .note-container {
     width: 55vw;
-    max-height: 70vh;
+  }
+}
+
+@media all and (max-width: 550px) {
+  html body .note-container {
+    width: 60vw;
+    max-height: 60vh;
     -webkit-box-shadow: -1vw 1vw 0.5vw 0.5vw #c1c1f0;
             box-shadow: -1vw 1vw 0.5vw 0.5vw #c1c1f0;
   }
 }
 
+@media all and (max-width: 450px) {
+  html body .note-container {
+    width: 65vw;
+  }
+}
+
 @media all and (max-width: 390px) {
   html body .note-container {
-    width: 60vw;
+    width: 70vw;
     -webkit-box-shadow: -1.2vw 1.2vw 0.7vw 0.7vw #c1c1f0;
             box-shadow: -1.2vw 1.2vw 0.7vw 0.7vw #c1c1f0;
   }
@@ -122,7 +139,7 @@ html body .note-container .header-note-section {
   background-image: linear-gradient(to right, #000033, #4d004d);
 }
 
-@media all and (max-width: 550px) {
+@media all and (max-width: 615px) {
   html body .note-container .header-note-section {
     height: 7vh;
   }
@@ -144,25 +161,25 @@ html body .note-container .header-note-section .note-input {
 
 @media all and (max-width: 615px) {
   html body .note-container .header-note-section .note-input {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
 @media all and (max-width: 515px) {
   html body .note-container .header-note-section .note-input {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 }
 
 @media all and (max-width: 415px) {
   html body .note-container .header-note-section .note-input {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
 }
 
 @media all and (max-width: 360px) {
   html body .note-container .header-note-section .note-input {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -179,32 +196,43 @@ html body .note-container .header-note-section .note-add-button {
           align-items: center;
   color: white;
   width: 20%;
-  font-size: 1rem;
+  font-size: 1.7rem;
   text-align: center;
   cursor: pointer;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+html body .note-container .header-note-section .note-add-button:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 @media all and (max-width: 615px) {
   html body .note-container .header-note-section .note-add-button {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
 }
 
 @media all and (max-width: 515px) {
   html body .note-container .header-note-section .note-add-button {
-    font-size: 1.2rem;
+    font-size: 1.9rem;
   }
 }
 
 @media all and (max-width: 415px) {
   html body .note-container .header-note-section .note-add-button {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 }
 
 @media all and (max-width: 360px) {
   html body .note-container .header-note-section .note-add-button {
-    font-size: 1.5rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -223,7 +251,7 @@ html body .note-container .note-entry-heading {
   margin-inline: auto;
   -webkit-margin-before: auto;
           margin-block-start: auto;
-  width: 10vw;
+  width: 16vw;
   height: 4vh;
   color: white;
   background-image: -webkit-gradient(linear, left top, right top, from(#000033), to(#4d004d));
@@ -231,10 +259,34 @@ html body .note-container .note-entry-heading {
   cursor: pointer;
 }
 
-@media all and (max-width: 415px) {
+@media all and (max-width: 615px) {
   html body .note-container .note-entry-heading {
+    font-size: 1.2rem;
     height: 3vh;
     width: 15vw;
+  }
+}
+
+@media all and (max-width: 515px) {
+  html body .note-container .note-entry-heading {
+    font-size: 1.1rem;
+    width: 16vw;
+  }
+}
+
+@media all and (max-width: 415px) {
+  html body .note-container .note-entry-heading {
+    height: 2vh;
+    width: 17vw;
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 360px) {
+  html body .note-container .note-entry-heading {
+    height: 1.9vh;
+    width: 18vw;
+    font-size: 0.9rem;
   }
 }
 
@@ -248,34 +300,31 @@ html body .note-container .main-note-section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   overflow: auto;
 }
 
 @media all and (max-width: 615px) {
   html body .note-container .main-note-section {
-    font-size: 1.5rem;
-    height: 45vh;
+    font-size: 1.1rem;
+    height: 35vh;
   }
 }
 
 @media all and (max-width: 515px) {
   html body .note-container .main-note-section {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 }
 
 @media all and (max-width: 415px) {
   html body .note-container .main-note-section {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 }
 
 @media all and (max-width: 360px) {
   html body .note-container .main-note-section {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -285,45 +334,85 @@ html body .note-container .main-note-section .note-line {
   display: flex;
   margin-block: 1vh;
   width: 95%;
-  min-height: 5vh;
   -webkit-box-shadow: -0.5vw 0.1vw 0.1vw 0.1vw #c1c1f0;
           box-shadow: -0.5vw 0.1vw 0.1vw 0.1vw #c1c1f0;
   background-color: #f2f2f2;
 }
 
 html body .note-container .main-note-section .note-line:first-child {
-  -webkit-margin-before: 5vh;
-          margin-block-start: 5vh;
+  -webkit-margin-before: 2vh;
+          margin-block-start: 2vh;
+}
+
+@media all and (max-width: 515px) {
+  html body .note-container .main-note-section .note-line {
+    margin-block: 0.5vh;
+  }
 }
 
 html body .note-container .main-note-section .note-line .note-item {
-  -webkit-padding-before: 1vh;
-          padding-block-start: 1vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-inline: 0.5vw;
-  min-height: inherit;
   word-break: break-all;
 }
 
 html body .note-container .main-note-section .note-line .note-check {
-  margin-block: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-block: 0.5vh;
   -webkit-margin-start: auto;
           margin-inline-start: auto;
-  -webkit-margin-end: 0.5vw;
-          margin-inline-end: 0.5vw;
+  -webkit-margin-end: 1vw;
+          margin-inline-end: 1vw;
+  width: 1rem;
+  height: 1rem;
 }
 
-@media all and (max-width: 615px) {
+html body .note-container .main-note-section .note-line .note-check input {
+  width: inherit;
+  height: inherit;
+}
+
+@media all and (max-width: 760px) {
   html body .note-container .main-note-section .note-line .note-check {
-    width: 15px;
-    height: 12px;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+@media all and (max-width: 515px) {
+  html body .note-container .main-note-section .note-line .note-check {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
 html body .note-container .main-note-section .note-line .note-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-block: 0.5vh;
+  -webkit-margin-end: 0.5vw;
+          margin-inline-end: 0.5vw;
   cursor: pointer;
-  text-transform: uppercase;
-  margin-block: auto;
-  padding: 0.5vw;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -338,7 +427,13 @@ html body .note-container .main-note-section .note-line .note-delete {
 
 @media all and (max-width: 760px) {
   html body .note-container .main-note-section .note-line .note-delete {
-    font-size: 13px;
+    font-size: 1.2rem;
+  }
+}
+
+@media all and (max-width: 515px) {
+  html body .note-container .main-note-section .note-line .note-delete {
+    font-size: 1.5rem;
   }
 }
 
@@ -362,7 +457,7 @@ html body .note-container .delete-all-button {
   margin-inline: auto;
   -webkit-margin-before: auto;
           margin-block-start: auto;
-  width: 10vw;
+  width: 16vw;
   height: 4vh;
   color: white;
   background-image: -webkit-gradient(linear, left top, right top, from(#000033), to(#4d004d));
@@ -381,16 +476,34 @@ html body .note-container .delete-all-button:hover {
           transform: scaleX(1.1);
 }
 
-@media all and (max-width: 415px) {
+@media all and (max-width: 615px) {
   html body .note-container .delete-all-button {
+    font-size: 1.2rem;
     height: 3vh;
     width: 15vw;
   }
 }
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 515px) {
   html body .note-container .delete-all-button {
-    height: 2.5vh;
+    font-size: 1.1rem;
+    width: 16vw;
+  }
+}
+
+@media all and (max-width: 415px) {
+  html body .note-container .delete-all-button {
+    height: 2vh;
+    width: 17vw;
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 360px) {
+  html body .note-container .delete-all-button {
+    height: 1.9vh;
+    width: 18vw;
+    font-size: 0.9rem;
   }
 }
 
@@ -402,7 +515,7 @@ html body .note-container .footer-section {
   background-image: linear-gradient(to right, #000033, #4d004d);
 }
 
-@media all and (max-width: 550px) {
+@media all and (max-width: 615px) {
   html body .note-container .footer-section {
     height: 7vh;
   }

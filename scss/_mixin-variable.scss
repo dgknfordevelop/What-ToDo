@@ -1,0 +1,114 @@
+$box-shadow-color:hsl(240, 61%, 85%);
+$linear-gradient: linear-gradient(to right, #000033, #4d004d);
+$radius: 1.2vw;
+
+@mixin relative-size-htmlTag {
+    
+    @media all and (max-width:960px) {
+        font-size: 14px;
+    }
+
+    @media all and (max-width:760px) {
+        font-size: 12px;
+    }
+
+    @media all and (max-width:615px) {
+        font-size: 10px;
+    }
+
+    @media all and (max-width:515px) {
+        font-size: 8px;
+    }
+
+    @media all and (max-width:415px) {
+        font-size: 7px;
+    }
+
+    @media all and (max-width:360px) {
+        font-size: 6px;
+    }
+
+    @media all and (min-width: 1300px) {
+        font-size: 17px;
+    }
+}
+
+@mixin relative-size-noteContainer {
+
+
+    @media all and (max-width: 1000px) {
+        width: 50vw;
+    }
+
+    @media all and (max-width: 765px) {
+        box-shadow: -1vw 0.9vw 0.3vw 0.3vw $box-shadow-color;
+
+    }
+
+    @media all and (max-width: 650px) {
+        width: 55vw;
+    }
+
+    @media all and (max-width: 550px) {
+        width: 60vw;
+        max-height: 60vh;
+        box-shadow: -1vw 1vw 0.5vw 0.5vw $box-shadow-color;
+
+    }
+    @media all and (max-width: 450px) {
+        width: 65vw;
+
+    }
+
+    @media all and (max-width: 390px) {
+       width: 70vw;
+        box-shadow: -1.2vw 1.2vw 0.7vw 0.7vw $box-shadow-color;
+
+    }
+
+    
+}
+
+@mixin relative-size-mainNoteSection{
+    @media all and (max-width:615px) {
+        font-size: 1.1rem;
+        height: 35vh;
+    }
+
+    @media all and (max-width:515px) {
+        font-size: 1.2rem;
+    }
+
+    @media all and (max-width:415px) {
+        font-size: 1.3rem;
+    }
+
+    @media all and (max-width:360px) {
+        font-size: 1.4rem;
+    }
+}
+
+@mixin relative-size-entry-deleteAll{
+    @media all and (max-width:615px) {
+        font-size: 1.2rem;
+        height: 3vh;
+        width: 15vw;
+    }
+
+    @media all and (max-width:515px) {
+        font-size: 1.1rem;
+        width: 16vw;
+    }
+
+    @media all and (max-width:415px) {
+        height: 2vh;
+        width: 17vw;
+        font-size: 1rem;
+    }
+
+    @media all and (max-width:360px) {
+        height: 1.9vh;
+        width: 18vw;
+        font-size: 0.9rem;
+    }
+};

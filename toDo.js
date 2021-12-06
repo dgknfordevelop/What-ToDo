@@ -8,7 +8,6 @@ let noteItem = document.querySelector("note-item");
 addButton.addEventListener("click", addNote);
 noteSection.addEventListener("click", deleteSingleNote);
 deleteAllButton.addEventListener("click", deleteAll);
-checkItem.addEventListener("onchange", checkNote)
 
 function addNote() {
 
@@ -18,7 +17,8 @@ function addNote() {
     } else {
         noteSection.innerHTML += `<div class="note-line">
         <div class="note-item">${userInput.value}</div>
-        <input type="checkbox" class="note-check">
+        <div class="note-check">
+        <input type="checkbox" ></div>
         <div class="note-delete"><i class="far fa-trash-alt"></i></div></div>`
         userInput.value = "";
 
@@ -38,8 +38,4 @@ function deleteAll() {
     if (confirm("Do you want to delete all notes?")) {
         noteSection.innerHTML = "";
     }
-}
-
-function checkNote(e){
-e.target.parentElement.style.backgroundColor = "red";
 }
