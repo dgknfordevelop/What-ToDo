@@ -359,7 +359,11 @@ html body .note-container .main-note-section .note-line .note-item-toggleYes {
           align-items: center;
   padding-inline: 0.5vw;
   word-break: break-all;
-  text-decoration: line-through;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  -webkit-text-decoration-color: #000033;
+          text-decoration-color: #000033;
+  text-decoration-thickness: 0.2rem;
 }
 
 html body .note-container .main-note-section .note-line .note-item-toggleNo {

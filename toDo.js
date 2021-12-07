@@ -2,7 +2,6 @@ let userInput = document.querySelector(".note-input");
 let addButton = document.querySelector(".note-add-button");
 let noteSection = document.querySelector(".main-note-section");
 let deleteAllButton = document.querySelector(".delete-all-button");
-// let checkItem = document.getElementsByClassName(".note-check");
 
 addButton.addEventListener("click", addNote);
 noteSection.addEventListener("click", deleteSingleNote);
@@ -21,13 +20,17 @@ function addNote() {
         <div class="note-delete"><i class="far fa-trash-alt"></i></div></div>`
         userInput.value = "";
 
-        let noteItem = document.querySelector(".note-item-toggleNo");
-        let checkItem = document.querySelector(".note-check");
-        checkItem.addEventListener("click", checkIt);
+        let checkItem = document.querySelectorAll(".note-check");
+        for (let i = 0; i < checkItem.length; i++) {
+            checkItem[i].addEventListener("click", checkIt);
+        }
 
-        function checkIt() {
+        function checkIt(e) {
+
+            let noteItem = e.target.parentElement.previousElementSibling;
 
             if (noteItem.className == "note-item-toggleNo") {
+
                 noteItem.className = "note-item-toggleYes";
             } else {
                 noteItem.className = "note-item-toggleNo";
@@ -47,7 +50,13 @@ function deleteSingleNote(e) {
 }
 
 function deleteAll() {
-    if (confirm("Do you want to delete all notes?")) {
-        noteSection.innerHTML = "";
+    if (noteSection.children.length == 0) {
+        alert("There is nothing to delete.")
+        
+    } else{
+        if (confirm("Do you want to delete all notes?")) {
+            noteSection.innerHTML = "";
+        }
     }
+   
 }
