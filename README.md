@@ -1,12 +1,12 @@
 # Overview
-The main focus is on the ToDo application with a theme color change option and it additionally includes a digital clock and a counter.
+The main focus is on the ToDo application and it additionally includes a digital clock and a counter.
 
 ## Features 
 * A digital clock
 * A counter
 * You can add and delete a line of note individually. 
 * You can delete all lines of your note at once.
-* You can change the theme color from among the specified colors.
+* You can put a line through your every single note to show that you are done with them or however you want.
 
 ## Demo
 
