@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-@import 'mixin-variable';
+@import 'mixin/mixin';
+@import 'variable/variable';
 
 html {
     font-size: 15px;
@@ -157,9 +158,21 @@ html {
                         margin-block: 0.5vh;
                     }
 
+                    .note-item-toggleYes {
+                        display: flex;
+                        align-items: center;
+                        padding-inline: 0.5vw;
+                        word-break: break-all;
+                        text-decoration: line-through;
+                    }
 
-
-
+                    .note-item-toggleNo {
+                        display: flex;
+                        align-items: center;
+                        padding-inline: 0.5vw;
+                        word-break: break-all;
+                        text-decoration: none;
+                    }
 
                     .note-check {
                         display: flex;
@@ -188,13 +201,6 @@ html {
                         }
 
 
-                    }
-
-                    .note-item {
-                        display: flex;
-                        align-items: center;
-                        padding-inline: 0.5vw;
-                        word-break: break-all;
                     }
 
                     .note-delete {

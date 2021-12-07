@@ -350,6 +350,30 @@ html body .note-container .main-note-section .note-line:first-child {
   }
 }
 
+html body .note-container .main-note-section .note-line .note-item-toggleYes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: 0.5vw;
+  word-break: break-all;
+  text-decoration: line-through;
+}
+
+html body .note-container .main-note-section .note-line .note-item-toggleNo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: 0.5vw;
+  word-break: break-all;
+  text-decoration: none;
+}
+
 html body .note-container .main-note-section .note-line .note-check {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,17 +410,6 @@ html body .note-container .main-note-section .note-line .note-check input {
     width: 1.5rem;
     height: 1.5rem;
   }
-}
-
-html body .note-container .main-note-section .note-line .note-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-inline: 0.5vw;
-  word-break: break-all;
 }
 
 html body .note-container .main-note-section .note-line .note-delete {
