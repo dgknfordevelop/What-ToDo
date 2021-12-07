@@ -12,7 +12,7 @@ html {
     @include relative-size-htmlTag;
 
     body {
-        min-height: 100vh;
+        height: 100vh;
         font-family: sans-serif;
         font-weight: bold;
         display: flex;
