@@ -1,0 +1,12 @@
+.digital-clock-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: $linear-gradient;
+    width: 20vw;
+    height: 20vh;
+    font-size: 3rem;
+    border-radius: $radius;
+    box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw $box-shadow-color;
+    color: white;
+}

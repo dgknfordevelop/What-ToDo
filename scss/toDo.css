@@ -53,8 +53,8 @@ html {
 
 html body {
   height: 100vh;
-  font-family: sans-serif;
   font-weight: bold;
+  font-family: 'Be Vietnam Pro', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,42 +64,87 @@ html body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Be Vietnam Pro', sans-serif;
 }
 
-html body .note-container {
+html body .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-width: 100%;
+  min-height: 50%;
+}
+
+html body .main-container .counter-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000033), to(#4d004d));
+  background-image: linear-gradient(to right, #000033, #4d004d);
+  width: 20vw;
+  height: 20vh;
+  font-size: 2rem;
+  border-radius: 1.2vw;
+  -webkit-box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
+          box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
+  color: white;
+}
+
+html body .main-container .counter-container .counter-number {
+  -webkit-margin-before: auto;
+          margin-block-start: auto;
+  margin-inline: auto;
+}
+
+html body .main-container .counter-container .plus-minus-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-margin-after: auto;
+          margin-block-end: auto;
+  cursor: pointer;
+}
+
+html body .main-container .note-container {
   width: 40vw;
   max-height: 80vh;
-  border-start-start-radius: 1.2vw;
-  border-start-end-radius: 1.2vw;
-  border-end-start-radius: 1.2vw;
-  border-end-end-radius: 1.2vw;
+  border-radius: 1.2vw;
   -webkit-box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
           box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
   background-color: #ffe6ff;
 }
 
 @media all and (max-width: 1000px) {
-  html body .note-container {
+  html body .main-container .note-container {
     width: 50vw;
   }
 }
 
 @media all and (max-width: 765px) {
-  html body .note-container {
+  html body .main-container .note-container {
     -webkit-box-shadow: -1vw 0.9vw 0.3vw 0.3vw #c1c1f0;
             box-shadow: -1vw 0.9vw 0.3vw 0.3vw #c1c1f0;
   }
 }
 
 @media all and (max-width: 650px) {
-  html body .note-container {
+  html body .main-container .note-container {
     width: 55vw;
   }
 }
 
 @media all and (max-width: 550px) {
-  html body .note-container {
+  html body .main-container .note-container {
     width: 60vw;
     max-height: 60vh;
     -webkit-box-shadow: -1vw 1vw 0.5vw 0.5vw #c1c1f0;
@@ -108,20 +153,20 @@ html body .note-container {
 }
 
 @media all and (max-width: 450px) {
-  html body .note-container {
+  html body .main-container .note-container {
     width: 65vw;
   }
 }
 
 @media all and (max-width: 390px) {
-  html body .note-container {
+  html body .main-container .note-container {
     width: 70vw;
     -webkit-box-shadow: -1.2vw 1.2vw 0.7vw 0.7vw #c1c1f0;
             box-shadow: -1.2vw 1.2vw 0.7vw 0.7vw #c1c1f0;
   }
 }
 
-html body .note-container .header-note-section {
+html body .main-container .note-container .header-note-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,12 +185,12 @@ html body .note-container .header-note-section {
 }
 
 @media all and (max-width: 615px) {
-  html body .note-container .header-note-section {
+  html body .main-container .note-container .header-note-section {
     height: 7vh;
   }
 }
 
-html body .note-container .header-note-section .note-input {
+html body .main-container .note-container .header-note-section .note-input {
   width: 75%;
   height: 55%;
   font-size: 1.2rem;
@@ -160,30 +205,30 @@ html body .note-container .header-note-section .note-input {
 }
 
 @media all and (max-width: 615px) {
-  html body .note-container .header-note-section .note-input {
+  html body .main-container .note-container .header-note-section .note-input {
     font-size: 1.3rem;
   }
 }
 
 @media all and (max-width: 515px) {
-  html body .note-container .header-note-section .note-input {
+  html body .main-container .note-container .header-note-section .note-input {
     font-size: 1.4rem;
   }
 }
 
 @media all and (max-width: 415px) {
-  html body .note-container .header-note-section .note-input {
+  html body .main-container .note-container .header-note-section .note-input {
     font-size: 1.5rem;
   }
 }
 
 @media all and (max-width: 360px) {
-  html body .note-container .header-note-section .note-input {
+  html body .main-container .note-container .header-note-section .note-input {
     font-size: 1.6rem;
   }
 }
 
-html body .note-container .header-note-section .note-add-button {
+html body .main-container .note-container .header-note-section .note-add-button {
   background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,36 +252,36 @@ html body .note-container .header-note-section .note-add-button {
           transition-duration: 0.2s;
 }
 
-html body .note-container .header-note-section .note-add-button:hover {
+html body .main-container .note-container .header-note-section .note-add-button:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
 @media all and (max-width: 615px) {
-  html body .note-container .header-note-section .note-add-button {
+  html body .main-container .note-container .header-note-section .note-add-button {
     font-size: 1.8rem;
   }
 }
 
 @media all and (max-width: 515px) {
-  html body .note-container .header-note-section .note-add-button {
+  html body .main-container .note-container .header-note-section .note-add-button {
     font-size: 1.9rem;
   }
 }
 
 @media all and (max-width: 415px) {
-  html body .note-container .header-note-section .note-add-button {
+  html body .main-container .note-container .header-note-section .note-add-button {
     font-size: 2rem;
   }
 }
 
 @media all and (max-width: 360px) {
-  html body .note-container .header-note-section .note-add-button {
+  html body .main-container .note-container .header-note-section .note-add-button {
     font-size: 2.1rem;
   }
 }
 
-html body .note-container .note-entry-heading {
+html body .main-container .note-container .note-entry-heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -260,7 +305,7 @@ html body .note-container .note-entry-heading {
 }
 
 @media all and (max-width: 615px) {
-  html body .note-container .note-entry-heading {
+  html body .main-container .note-container .note-entry-heading {
     font-size: 1.2rem;
     height: 3vh;
     width: 15vw;
@@ -268,14 +313,14 @@ html body .note-container .note-entry-heading {
 }
 
 @media all and (max-width: 515px) {
-  html body .note-container .note-entry-heading {
+  html body .main-container .note-container .note-entry-heading {
     font-size: 1.1rem;
     width: 16vw;
   }
 }
 
 @media all and (max-width: 415px) {
-  html body .note-container .note-entry-heading {
+  html body .main-container .note-container .note-entry-heading {
     height: 2vh;
     width: 17vw;
     font-size: 1rem;
@@ -283,14 +328,14 @@ html body .note-container .note-entry-heading {
 }
 
 @media all and (max-width: 360px) {
-  html body .note-container .note-entry-heading {
+  html body .main-container .note-container .note-entry-heading {
     height: 1.9vh;
     width: 18vw;
     font-size: 0.9rem;
   }
 }
 
-html body .note-container .main-note-section {
+html body .main-container .note-container .main-note-section {
   background-color: inherit;
   height: calc(75vh - 24vh);
   display: -webkit-box;
@@ -304,31 +349,31 @@ html body .note-container .main-note-section {
 }
 
 @media all and (max-width: 615px) {
-  html body .note-container .main-note-section {
+  html body .main-container .note-container .main-note-section {
     font-size: 1.1rem;
     height: 35vh;
   }
 }
 
 @media all and (max-width: 515px) {
-  html body .note-container .main-note-section {
+  html body .main-container .note-container .main-note-section {
     font-size: 1.2rem;
   }
 }
 
 @media all and (max-width: 415px) {
-  html body .note-container .main-note-section {
+  html body .main-container .note-container .main-note-section {
     font-size: 1.3rem;
   }
 }
 
 @media all and (max-width: 360px) {
-  html body .note-container .main-note-section {
+  html body .main-container .note-container .main-note-section {
     font-size: 1.4rem;
   }
 }
 
-html body .note-container .main-note-section .note-line {
+html body .main-container .note-container .main-note-section .note-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,18 +384,18 @@ html body .note-container .main-note-section .note-line {
   background-color: #f2f2f2;
 }
 
-html body .note-container .main-note-section .note-line:first-child {
+html body .main-container .note-container .main-note-section .note-line:first-child {
   -webkit-margin-before: 2vh;
           margin-block-start: 2vh;
 }
 
 @media all and (max-width: 515px) {
-  html body .note-container .main-note-section .note-line {
+  html body .main-container .note-container .main-note-section .note-line {
     margin-block: 0.5vh;
   }
 }
 
-html body .note-container .main-note-section .note-line .note-item-toggleYes {
+html body .main-container .note-container .main-note-section .note-line .note-item-toggleYes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -366,7 +411,7 @@ html body .note-container .main-note-section .note-line .note-item-toggleYes {
   text-decoration-thickness: 0.2rem;
 }
 
-html body .note-container .main-note-section .note-line .note-item-toggleNo {
+html body .main-container .note-container .main-note-section .note-line .note-item-toggleNo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,7 +423,7 @@ html body .note-container .main-note-section .note-line .note-item-toggleNo {
   text-decoration: none;
 }
 
-html body .note-container .main-note-section .note-line .note-check {
+html body .main-container .note-container .main-note-section .note-line .note-check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,26 +442,26 @@ html body .note-container .main-note-section .note-line .note-check {
   height: 1rem;
 }
 
-html body .note-container .main-note-section .note-line .note-check input {
+html body .main-container .note-container .main-note-section .note-line .note-check input {
   width: inherit;
   height: inherit;
 }
 
 @media all and (max-width: 760px) {
-  html body .note-container .main-note-section .note-line .note-check {
+  html body .main-container .note-container .main-note-section .note-line .note-check {
     width: 1.2rem;
     height: 1.2rem;
   }
 }
 
 @media all and (max-width: 515px) {
-  html body .note-container .main-note-section .note-line .note-check {
+  html body .main-container .note-container .main-note-section .note-line .note-check {
     width: 1.5rem;
     height: 1.5rem;
   }
 }
 
-html body .note-container .main-note-section .note-line .note-delete {
+html body .main-container .note-container .main-note-section .note-line .note-delete {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,23 +488,23 @@ html body .note-container .main-note-section .note-line .note-delete {
 }
 
 @media all and (max-width: 760px) {
-  html body .note-container .main-note-section .note-line .note-delete {
+  html body .main-container .note-container .main-note-section .note-line .note-delete {
     font-size: 1.2rem;
   }
 }
 
 @media all and (max-width: 515px) {
-  html body .note-container .main-note-section .note-line .note-delete {
+  html body .main-container .note-container .main-note-section .note-line .note-delete {
     font-size: 1.5rem;
   }
 }
 
-html body .note-container .main-note-section .note-line .note-delete:hover {
+html body .main-container .note-container .main-note-section .note-line .note-delete:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
-html body .note-container .delete-all-button {
+html body .main-container .note-container .delete-all-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -488,13 +533,13 @@ html body .note-container .delete-all-button {
           transition-duration: 0.1s;
 }
 
-html body .note-container .delete-all-button:hover {
+html body .main-container .note-container .delete-all-button:hover {
   -webkit-transform: scaleX(1.1);
           transform: scaleX(1.1);
 }
 
 @media all and (max-width: 615px) {
-  html body .note-container .delete-all-button {
+  html body .main-container .note-container .delete-all-button {
     font-size: 1.2rem;
     height: 3vh;
     width: 15vw;
@@ -502,14 +547,14 @@ html body .note-container .delete-all-button:hover {
 }
 
 @media all and (max-width: 515px) {
-  html body .note-container .delete-all-button {
+  html body .main-container .note-container .delete-all-button {
     font-size: 1.1rem;
     width: 16vw;
   }
 }
 
 @media all and (max-width: 415px) {
-  html body .note-container .delete-all-button {
+  html body .main-container .note-container .delete-all-button {
     height: 2vh;
     width: 17vw;
     font-size: 1rem;
@@ -517,14 +562,14 @@ html body .note-container .delete-all-button:hover {
 }
 
 @media all and (max-width: 360px) {
-  html body .note-container .delete-all-button {
+  html body .main-container .note-container .delete-all-button {
     height: 1.9vh;
     width: 18vw;
     font-size: 0.9rem;
   }
 }
 
-html body .note-container .footer-section {
+html body .main-container .note-container .footer-section {
   height: 10vh;
   border-end-start-radius: 1.2vw;
   border-end-end-radius: 1.2vw;
@@ -533,8 +578,28 @@ html body .note-container .footer-section {
 }
 
 @media all and (max-width: 615px) {
-  html body .note-container .footer-section {
+  html body .main-container .note-container .footer-section {
     height: 7vh;
   }
+}
+
+html body .main-container .digital-clock-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000033), to(#4d004d));
+  background-image: linear-gradient(to right, #000033, #4d004d);
+  width: 20vw;
+  height: 20vh;
+  font-size: 3rem;
+  border-radius: 1.2vw;
+  -webkit-box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
+          box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
+  color: white;
 }
 /*# sourceMappingURL=toDo.css.map */

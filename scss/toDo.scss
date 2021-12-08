@@ -14,266 +14,275 @@ html {
 
     body {
         height: 100vh;
-        font-family: sans-serif;
         font-weight: bold;
+        font-family: 'Be Vietnam Pro', sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Be Vietnam Pro', sans-serif;
 
-        .note-container {
-            width: 40vw;
-            max-height: 80vh;
-            border-start-start-radius: $radius;
-            border-start-end-radius: $radius;
-            border-end-start-radius: $radius;
-            border-end-end-radius: $radius;
-            box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw $box-shadow-color;
-            background-color: #ffe6ff;
+        .main-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            min-width: 100%;
+            min-height: 50%;
 
-            @include relative-size-noteContainer;
+            @import 'counter/counter';
+
+            .note-container {
+                width: 40vw;
+                max-height: 80vh;
+                border-radius: $radius;
+                box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw $box-shadow-color;
+                background-color: #ffe6ff;
+
+                @include relative-size-noteContainer;
 
 
 
-            .header-note-section {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 10vh;
-                border-start-start-radius: $radius;
-                border-start-end-radius: $radius;
-                background-image: $linear-gradient;
-
-                @media all and (max-width: 615px) {
-                    height: 7vh;
-                }
-
-                .note-input {
-                    width: 75%;
-                    height: 55%;
-                    font-size: 1.2rem;
-                    padding-inline-start: 0.5vw;
-                    margin-inline-start: auto;
-                    border-radius: $radius;
-                    border: none;
-                    outline: none;
-                    text-decoration: none;
-
-                    @media all and (max-width:615px) {
-                        font-size: 1.3rem;
-                    }
-
-                    @media all and (max-width:515px) {
-                        font-size: 1.4rem;
-                    }
-
-                    @media all and (max-width:415px) {
-                        font-size: 1.5rem;
-                    }
-
-                    @media all and (max-width:360px) {
-                        font-size: 1.6rem;
-                    }
-                }
-
-                .note-add-button {
-                    background-color: transparent;
+                .header-note-section {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: white;
-                    width: 20%;
-                    font-size: 1.7rem;
-                    text-align: center;
-                    cursor: pointer;
-                    transition-property: transform;
-                    transition-duration: 0.2s;
+                    width: 100%;
+                    height: 10vh;
+                    border-start-start-radius: $radius;
+                    border-start-end-radius: $radius;
+                    background-image: $linear-gradient;
 
-                    &:hover {
-                        transform: scale(0.9);
+                    @media all and (max-width: 615px) {
+                        height: 7vh;
                     }
 
-                    @media all and (max-width:615px) {
-                        font-size: 1.8rem;
-                    }
-
-                    @media all and (max-width:515px) {
-                        font-size: 1.9rem;
-                    }
-
-                    @media all and (max-width:415px) {
-                        font-size: 2rem;
-                    }
-
-                    @media all and (max-width:360px) {
-                        font-size: 2.1rem;
-                    }
-                }
-
-
-
-            }
-
-            .note-entry-heading {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-end-start-radius: $radius;
-                border-end-end-radius: $radius;
-                margin-inline: auto;
-                margin-block-start: auto;
-                width: 16vw;
-                height: 4vh;
-                color: white;
-                background-image: $linear-gradient;
-                cursor: pointer;
-
-                @include relative-size-entry-deleteAll;
-            }
-
-
-            .main-note-section {
-                background-color: inherit;
-                height: calc(75vh - 24vh);
-                display: flex;
-                flex-direction: column;
-                overflow: auto;
-
-
-                @include relative-size-mainNoteSection;
-
-                .note-line {
-                    display: flex;
-                    margin-block: 1vh;
-                    width: 95%;
-                    box-shadow: -0.5vw 0.1vw 0.1vw 0.1vw $box-shadow-color;
-                    background-color: #f2f2f2;
-
-                    &:first-child {
-                        margin-block-start: 2vh;
-                    }
-
-                    @media all and (max-width:515px) {
-                        margin-block: 0.5vh;
-                    }
-
-                    .note-item-toggleYes {
-                        display: flex;
-                        align-items: center;
-                        padding-inline: 0.5vw;
-                        word-break: break-all;
-                        text-decoration-line: line-through;
-                        text-decoration-color: #000033;
-                        text-decoration-thickness: 0.2rem;
-                    }
-
-                    .note-item-toggleNo {
-                        display: flex;
-                        align-items: center;
-                        padding-inline: 0.5vw;
-                        word-break: break-all;
-                        text-decoration: none;
-                    }
-
-                    .note-check {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin-block: 0.5vh;
+                    .note-input {
+                        width: 75%;
+                        height: 55%;
+                        font-size: 1.2rem;
+                        padding-inline-start: 0.5vw;
                         margin-inline-start: auto;
-                        margin-inline-end: 1vw;
-                        width: 1rem;
-                        height: 1rem;
+                        border-radius: $radius;
+                        border: none;
+                        outline: none;
+                        text-decoration: none;
 
-                        input {
-                            width: inherit;
-                            height: inherit;
-
-                        }
-
-                        @media all and (max-width:760px) {
-                            width: 1.2rem;
-                            height: 1.2rem;
+                        @media all and (max-width:615px) {
+                            font-size: 1.3rem;
                         }
 
                         @media all and (max-width:515px) {
-                            width: 1.5rem;
-                            height: 1.5rem;
+                            font-size: 1.4rem;
                         }
 
+                        @media all and (max-width:415px) {
+                            font-size: 1.5rem;
+                        }
 
+                        @media all and (max-width:360px) {
+                            font-size: 1.6rem;
+                        }
                     }
 
-                    .note-delete {
+                    .note-add-button {
+                        background-color: transparent;
                         display: flex;
-                        align-items: flex-start;
                         justify-content: center;
-                        margin-block: 0.5vh;
-                        margin-inline-end: 0.5vw;
+                        align-items: center;
+                        color: white;
+                        width: 20%;
+                        font-size: 1.7rem;
+                        text-align: center;
                         cursor: pointer;
                         transition-property: transform;
                         transition-duration: 0.2s;
-                        background-image: $linear-gradient;
-                        -webkit-background-clip: text;
-                        color: transparent;
-
-                        @media all and (max-width:760px) {
-                            font-size: 1.2rem;
-                        }
-
-                        @media all and (max-width:515px) {
-                            font-size: 1.5rem;
-                        }
 
                         &:hover {
                             transform: scale(0.9);
                         }
 
+                        @media all and (max-width:615px) {
+                            font-size: 1.8rem;
+                        }
+
+                        @media all and (max-width:515px) {
+                            font-size: 1.9rem;
+                        }
+
+                        @media all and (max-width:415px) {
+                            font-size: 2rem;
+                        }
+
+                        @media all and (max-width:360px) {
+                            font-size: 2.1rem;
+                        }
+                    }
+
+
+
+                }
+
+                .note-entry-heading {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-end-start-radius: $radius;
+                    border-end-end-radius: $radius;
+                    margin-inline: auto;
+                    margin-block-start: auto;
+                    width: 16vw;
+                    height: 4vh;
+                    color: white;
+                    background-image: $linear-gradient;
+                    cursor: pointer;
+
+                    @include relative-size-entry-deleteAll;
+                }
+
+
+                .main-note-section {
+                    background-color: inherit;
+                    height: calc(75vh - 24vh);
+                    display: flex;
+                    flex-direction: column;
+                    overflow: auto;
+
+
+                    @include relative-size-mainNoteSection;
+
+                    .note-line {
+                        display: flex;
+                        margin-block: 1vh;
+                        width: 95%;
+                        box-shadow: -0.5vw 0.1vw 0.1vw 0.1vw $box-shadow-color;
+                        background-color: #f2f2f2;
+
+                        &:first-child {
+                            margin-block-start: 2vh;
+                        }
+
+                        @media all and (max-width:515px) {
+                            margin-block: 0.5vh;
+                        }
+
+                        .note-item-toggleYes {
+                            display: flex;
+                            align-items: center;
+                            padding-inline: 0.5vw;
+                            word-break: break-all;
+                            text-decoration-line: line-through;
+                            text-decoration-color: #000033;
+                            text-decoration-thickness: 0.2rem;
+                        }
+
+                        .note-item-toggleNo {
+                            display: flex;
+                            align-items: center;
+                            padding-inline: 0.5vw;
+                            word-break: break-all;
+                            text-decoration: none;
+                        }
+
+                        .note-check {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-block: 0.5vh;
+                            margin-inline-start: auto;
+                            margin-inline-end: 1vw;
+                            width: 1rem;
+                            height: 1rem;
+
+                            input {
+                                width: inherit;
+                                height: inherit;
+
+                            }
+
+                            @media all and (max-width:760px) {
+                                width: 1.2rem;
+                                height: 1.2rem;
+                            }
+
+                            @media all and (max-width:515px) {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+
+
+                        }
+
+                        .note-delete {
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: center;
+                            margin-block: 0.5vh;
+                            margin-inline-end: 0.5vw;
+                            cursor: pointer;
+                            transition-property: transform;
+                            transition-duration: 0.2s;
+                            background-image: $linear-gradient;
+                            -webkit-background-clip: text;
+                            color: transparent;
+
+                            @media all and (max-width:760px) {
+                                font-size: 1.2rem;
+                            }
+
+                            @media all and (max-width:515px) {
+                                font-size: 1.5rem;
+                            }
+
+                            &:hover {
+                                transform: scale(0.9);
+                            }
+
+                        }
+                    }
+
+
+
+
+                }
+
+                .delete-all-button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-start-start-radius: $radius;
+                    border-start-end-radius: $radius;
+                    margin-inline: auto;
+                    margin-block-start: auto;
+                    width: 16vw;
+                    height: 4vh;
+                    color: white;
+                    background-image: $linear-gradient;
+                    cursor: pointer;
+                    transition-property: transform;
+                    transition-duration: 0.1s;
+
+                    &:hover {
+                        transform: scaleX(1.1);
+
+                    }
+
+                    @include relative-size-entry-deleteAll;
+                }
+
+
+
+                .footer-section {
+                    height: 10vh;
+                    border-end-start-radius: $radius;
+                    border-end-end-radius: $radius;
+                    background-image: $linear-gradient;
+
+                    @media all and (max-width: 615px) {
+                        height: 7vh;
                     }
                 }
-
-
-
-
             }
 
-            .delete-all-button {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-start-start-radius: $radius;
-                border-start-end-radius: $radius;
-                margin-inline: auto;
-                margin-block-start: auto;
-                width: 16vw;
-                height: 4vh;
-                color: white;
-                background-image: $linear-gradient;
-                cursor: pointer;
-                transition-property: transform;
-                transition-duration: 0.1s;
+            @import 'digital-clock/digitalClock';
 
-                &:hover {
-                    transform: scaleX(1.1);
-
-                }
-
-                @include relative-size-entry-deleteAll;
-            }
-
-
-
-            .footer-section {
-                height: 10vh;
-                border-end-start-radius: $radius;
-                border-end-end-radius: $radius;
-                background-image: $linear-gradient;
-
-                @media all and (max-width: 615px) {
-                    height: 7vh;
-                }
-            }
         }
     }
 }

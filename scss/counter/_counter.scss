@@ -1,0 +1,23 @@
+.counter-container{
+    display: flex;
+    flex-direction: column;
+    background-image: $linear-gradient;
+    width: 20vw;
+    height: 20vh;
+    font-size: 2rem;
+    border-radius: $radius;
+    box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw $box-shadow-color;
+    color: white;
+
+    .counter-number{
+        margin-block-start: auto;
+        margin-inline: auto;
+    }
+
+    .plus-minus-container{
+        display: flex;
+        justify-content: space-around;
+        margin-block-end: auto;
+        cursor: pointer;
+    }
+}
