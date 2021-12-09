@@ -99,8 +99,7 @@ html body .main-container .counter-container {
 }
 
 html body .main-container .counter-container .counter-number {
-  -webkit-margin-before: auto;
-          margin-block-start: auto;
+  margin-block: auto;
   margin-inline: auto;
 }
 
@@ -112,7 +111,29 @@ html body .main-container .counter-container .plus-minus-container {
       justify-content: space-around;
   -webkit-margin-after: auto;
           margin-block-end: auto;
+}
+
+html body .main-container .counter-container .plus-minus-container * {
   cursor: pointer;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+html body .main-container .counter-container .plus-minus-container *:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+html body .main-container .counter-container .plus-minus-container .reset-button {
+  font-size: 1.2rem;
+  padding-inline: 1.5rem;
+  border: 2px solid white;
+  border-radius: 1.2vw;
+  line-height: 1.5;
 }
 
 html body .main-container .note-container {

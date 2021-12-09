@@ -109,3 +109,12 @@
         font-size: 0.9rem;
     }
 };
+
+@mixin transform{
+            transition-property: transform;
+            transition-duration: 0.2s;
+            
+                &:hover {
+                transform: scale(0.9);
+            }
+};

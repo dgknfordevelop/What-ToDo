@@ -92,12 +92,7 @@ html {
                         font-size: 1.7rem;
                         text-align: center;
                         cursor: pointer;
-                        transition-property: transform;
-                        transition-duration: 0.2s;
-
-                        &:hover {
-                            transform: scale(0.9);
-                        }
+                        @include transform;
 
                         @media all and (max-width:615px) {
                             font-size: 1.8rem;
