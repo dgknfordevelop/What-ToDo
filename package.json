@@ -1,0 +1,25 @@
+{
+  "name": "what-todo",
+  "version": "1.0.0",
+  "description": "todo app with a counter and a digital clock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgknfordevelop/What-ToDo.git"
+  },
+  "author": "Doğukan Çalışkan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dgknfordevelop/What-ToDo/issues"
+  },
+  "homepage": "https://github.com/dgknfordevelop/What-ToDo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.45.0"
+  }
+}
