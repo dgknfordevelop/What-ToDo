@@ -13,6 +13,9 @@
     .hrs-mnts-scnds{
         width: 80%;
         padding-inline-start: 1.2vw;
+        @media all and (max-width: 890px){
+            padding-inline-start: 1.5vw;
+        }
     }
     
     @include relative-size-clock;
