@@ -27,6 +27,12 @@ html {
             min-width: 100%;
             min-height: 50%;
 
+            @media all and (max-width:615px) {
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+            }
+
             @import 'counter/counter';
 
             .note-container {

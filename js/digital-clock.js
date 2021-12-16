@@ -12,21 +12,21 @@ function timeSet() {
 
 
     if (digitalHours >= 0 && digitalHours < 10) {
-        hoursBox.textContent = `0${digitalHours}`;
+        hoursBox.textContent = `0${digitalHours} :`;
     } else {
-        hoursBox.textContent = digitalHours;
+        hoursBox.textContent = `${digitalHours} :`;
     };
 
     if (digitalMinutes >= 0 && digitalMinutes < 10) {
-        minutesBox.textContent = `0${digitalMinutes}`;
+        minutesBox.textContent = `0${digitalMinutes} :`;
     } else {
-        minutesBox.textContent = digitalMinutes;
+        minutesBox.textContent = `${digitalMinutes} :`;
     };
 
     if (digitalSeconds >= 0 && digitalSeconds < 10) {
         secondsBox.textContent = `0${digitalSeconds}`;
     } else {
-        secondsBox.textContent = digitalSeconds;
+        secondsBox.textContent = `${digitalSeconds}`;
     };
 
 }

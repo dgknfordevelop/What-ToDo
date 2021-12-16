@@ -57,6 +57,13 @@ html body .main-container {
   min-width: 100%;
   min-height: 50%;
 }
+@media all and (max-width: 615px) {
+  html body .main-container {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+}
 html body .main-container .counter-container {
   display: flex;
   flex-direction: column;
@@ -88,9 +95,81 @@ html body .main-container .counter-container .plus-minus-container *:hover {
 html body .main-container .counter-container .plus-minus-container .reset-button {
   font-size: 1.2rem;
   padding-inline: 1.5rem;
+  width: fit-content;
   border: 2px solid white;
   border-radius: 1.2vw;
   line-height: 1.5;
+}
+@media all and (max-width: 1060px) {
+  html body .main-container .counter-container .plus-minus-container .reset-button {
+    font-size: 1rem;
+    padding-inline: 1.3rem;
+    line-height: 1.6;
+  }
+}
+@media all and (max-width: 1000px) {
+  html body .main-container .counter-container .plus-minus-container .reset-button {
+    font-size: 0.9rem;
+    padding-inline: 1.2rem;
+  }
+}
+@media all and (max-width: 890px) {
+  html body .main-container .counter-container .plus-minus-container .reset-button {
+    font-size: 0.6rem;
+    padding-inline: 1rem;
+  }
+}
+@media all and (max-width: 615px) {
+  html body .main-container .counter-container .plus-minus-container .reset-button {
+    padding-inline: 0.8rem;
+    line-height: 1.8;
+  }
+}
+@media all and (max-width: 360px) {
+  html body .main-container .counter-container .plus-minus-container .reset-button {
+    padding-inline: 0.9rem;
+    font-size: 1rem;
+    border-width: 1px;
+  }
+}
+@media all and (max-width: 1060px) {
+  html body .main-container .counter-container {
+    width: 18vw;
+    height: 18vh;
+  }
+}
+@media all and (max-width: 1000px) {
+  html body .main-container .counter-container {
+    width: 16vw;
+    height: 16vh;
+    font-size: 1.6rem;
+  }
+}
+@media all and (max-width: 890px) {
+  html body .main-container .counter-container {
+    width: 15vw;
+    height: 15vh;
+    font-size: 1.2rem;
+  }
+}
+@media all and (max-width: 615px) {
+  html body .main-container .counter-container {
+    width: 20vw;
+    height: 13vh;
+    font-size: 1.5rem;
+  }
+}
+@media all and (max-width: 515px) {
+  html body .main-container .counter-container {
+    height: 10vh;
+  }
+}
+@media all and (max-width: 360px) {
+  html body .main-container .counter-container {
+    height: 8vh;
+    width: 30vw;
+    font-size: 1.8rem;
+  }
 }
 html body .main-container .note-container {
   width: 40vw;
@@ -426,13 +505,63 @@ html body .main-container .note-container .footer-section {
 }
 html body .main-container .digital-clock-container {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
   background-image: linear-gradient(to right, #000033, #4d004d);
   width: 20vw;
   height: 20vh;
-  font-size: 3rem;
+  font-size: 2.1rem;
   border-radius: 1.2vw;
   box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
   color: white;
+}
+html body .main-container .digital-clock-container .hrs-mnts-scnds {
+  width: 80%;
+  padding-inline-start: 1.2vw;
+}
+@media all and (max-width: 1060px) {
+  html body .main-container .digital-clock-container {
+    width: 18vw;
+    height: 18vh;
+    font-size: 1.8rem;
+  }
+}
+@media all and (max-width: 1000px) {
+  html body .main-container .digital-clock-container {
+    width: 16vw;
+    height: 16vh;
+    font-size: 1.4rem;
+  }
+}
+@media all and (max-width: 890px) {
+  html body .main-container .digital-clock-container {
+    width: 15vw;
+    height: 15vh;
+    font-size: 1.1rem;
+  }
+}
+@media all and (max-width: 615px) {
+  html body .main-container .digital-clock-container {
+    font-size: 1.5rem;
+    width: 20vw;
+    height: 13vh;
+  }
+}
+@media all and (max-width: 515px) {
+  html body .main-container .digital-clock-container {
+    font-size: 1.5rem;
+    height: 10vh;
+  }
+}
+@media all and (max-width: 360px) {
+  html body .main-container .digital-clock-container {
+    height: 8vh;
+    width: 30vw;
+    font-size: 2.3rem;
+  }
+}
+@media all and (max-width: 300px) {
+  html body .main-container .digital-clock-container {
+    font-size: 1.8rem;
+  }
 }

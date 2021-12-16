@@ -1,12 +1,19 @@
 .digital-clock-container{
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
     background-image: $linear-gradient;
     width: 20vw;
     height: 20vh;
-    font-size: 3rem;
+    font-size: 2.1rem;
     border-radius: $radius;
     box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw $box-shadow-color;
     color: white;
+
+    .hrs-mnts-scnds{
+        width: 80%;
+        padding-inline-start: 1.2vw;
+    }
+    
+    @include relative-size-clock;
 }

@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 
-function styles() {
+ function style() {
   return gulp.src('./scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./scss/css'))
@@ -18,11 +18,12 @@ function watch(){
         }
     });
 
-    gulp.watch('./scss/**/*.scss', styles); // if anything changes here it starts the 'style'.
+    gulp.watch('./scss/**/*.scss', style); // if anything changes here it starts the 'style'.
     gulp.watch('./*.html').on('change', browserSync.reload);
     gulp.watch('./js/*.js').on('change', browserSync.reload);
+    
 }
 
 
-exports.style = styles;
+exports.style = style;
 exports.watch = watch;
