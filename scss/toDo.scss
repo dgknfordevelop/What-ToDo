@@ -19,7 +19,7 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-
+        overflow: hidden;
         .main-container {
             display: flex;
             justify-content: space-around;
@@ -57,7 +57,7 @@ html {
                     background-image: $linear-gradient;
 
                     @media all and (max-width: 615px) {
-                        height: 7vh;
+                        height: 10vh;
                     }
 
                     .note-input {
@@ -72,19 +72,19 @@ html {
                         text-decoration: none;
 
                         @media all and (max-width:615px) {
-                            font-size: 1.3rem;
+                            font-size: 2rem;
                         }
 
                         @media all and (max-width:515px) {
-                            font-size: 1.4rem;
+                            font-size: 2.1rem;
                         }
 
                         @media all and (max-width:415px) {
-                            font-size: 1.5rem;
+                            font-size: 2.2rem;
                         }
 
                         @media all and (max-width:360px) {
-                            font-size: 1.6rem;
+                            font-size: 2.3rem;
                         }
                     }
 
@@ -159,9 +159,18 @@ html {
                         &:first-child {
                             margin-block-start: 2vh;
                         }
-
+                        @media all and (max-width:760px) {
+                            font-size: 1.5rem;
+                        }
                         @media all and (max-width:515px) {
                             margin-block: 0.5vh;
+                            font-size: 2rem;
+                        }
+                        @media all and (max-width:415px) {
+                            font-size: 2.5rem;
+                        }
+                        @media all and (max-width:360px) {
+                            font-size: 3rem;
                         }
 
                         .note-item-toggleYes {
@@ -204,8 +213,8 @@ html {
                             }
 
                             @media all and (max-width:515px) {
-                                width: 1.5rem;
-                                height: 1.5rem;
+                                width: 2rem;
+                                height: 2rem;
                             }
 
 
@@ -230,7 +239,7 @@ html {
                             }
 
                             @media all and (max-width:515px) {
-                                font-size: 1.5rem;
+                                font-size: 2rem;
                             }
 
                             &:hover {
@@ -272,13 +281,13 @@ html {
 
 
                 .footer-section {
-                    height: 10vh;
+                    height: 11vh;
                     border-end-start-radius: $radius;
                     border-end-end-radius: $radius;
                     background-image: $linear-gradient;
 
                     @media all and (max-width: 615px) {
-                        height: 7vh;
+                        height: 10vh;
                     }
                 }
             }

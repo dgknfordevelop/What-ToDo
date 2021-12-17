@@ -45,11 +45,14 @@
         width: 55vw;
     }
 
+    @media all and (max-width: 615px) {
+        width: 65vw;
+    }
+
     @media all and (max-width: 550px) {
         width: 70vw;
-        max-height: 60vh;
+        min-height: 40vh;
         box-shadow: -1vw 1vw 0.5vw 0.5vw $box-shadow-color;
-
     }
 
     @media all and (max-width: 450px) {
@@ -68,21 +71,9 @@
 
 @mixin relative-size-mainNoteSection {
     @media all and (max-width:615px) {
-        font-size: 1.1rem;
-        height: 30vh;
+        height: 40vh;
     }
 
-    @media all and (max-width:515px) {
-        font-size: 1.2rem;
-    }
-
-    @media all and (max-width:415px) {
-        font-size: 1.3rem;
-    }
-
-    @media all and (max-width:360px) {
-        font-size: 1.4rem;
-    }
 }
 
 @mixin relative-size-entry-deleteAll {
@@ -94,17 +85,19 @@
 
     @media all and (max-width:515px) {
         width: 16vw;
-        font-size: 1.4rem;
+        height: 5vh;
+        font-size: 1.5rem;
     }
 
     @media all and (max-width:415px) {
         width: 20vw;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     @media all and (max-width:360px) {
         width: 24vw;
-        font-size: 1.7rem;
+        height: 6vh;
+        font-size: 2rem;
     }
 
     @media all and (max-width:260px) {
@@ -138,34 +131,33 @@
     }
 
     @media all and (max-width: 515px) {
+        width: 30vw;
         height: 11vh;
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
 
 
     @media all and (max-width: 470px) {
-        width: 30vw;
-    }
-
-    @media all and (max-width: 415px) {
-        width: 30vw;
+        width: 40vw;
         font-size: 2.5rem;
     }
 
+    @media all and (max-width: 415px) {
+        font-size: 2.9rem;
+    }
+
     @media all and (max-width: 360px) {
-        height: 9vh;
-        width: 35vw;
+        height: 11vh;
+        font-size: 3rem;
+
     }
 
     @media all and (max-width: 300px) {
-        width: 40vw;
-        font-size: 3rem;
 
     }
 
     @media all and (max-width: 260px) {
         width: 45vw;
-
     }
 }
 
@@ -189,30 +181,28 @@
     }
 
     @media all and (max-width: 615px) {
-        font-size: 2rem;
+        font-size: 1.8rem;
         width: 25vw;
         height: 13vh;
     }
 
     @media all and (max-width: 515px) {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
         height: 11vh;
-
-    }
-
-    @media all and (max-width: 470px) {
         width: 30vw;
     }
 
+    @media all and (max-width: 470px) {
+        width: 40vw;
+        font-size: 3rem;
+    }
+
     @media all and (max-width: 360px) {
-        height: 9vh;
-        width: 35vw;
-        font-size: 2.7rem;
+        height: 11vh;
     }
 
     @media all and (max-width: 300px) {
-        width: 40vw;
-
+        font-size: 2.5rem;
     }
 
     @media all and (max-width: 260px) {
@@ -229,5 +219,3 @@
         transform: scale(0.9);
     }
 }
-
-;
