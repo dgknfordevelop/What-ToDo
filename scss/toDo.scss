@@ -20,24 +20,23 @@ html {
         justify-content: center;
         align-items: center;
         overflow: hidden;
+
         .main-container {
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
-            min-width: 100%;
-            min-height: 50%;
+            width: 100%;
 
             @media all and (max-width:615px) {
                 flex-direction: column;
                 align-items: center;
-                height: 100%;
+                height: 100vh;
             }
 
             @import 'counter/counter';
 
             .note-container {
                 width: 40vw;
-                max-height: 80vh;
                 border-radius: $radius;
                 box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw $box-shadow-color;
                 background-color: #ffe6ff;
@@ -105,15 +104,15 @@ html {
                         }
 
                         @media all and (max-width:515px) {
-                            font-size: 1.9rem;
+                            font-size: 2.5rem;
                         }
 
                         @media all and (max-width:415px) {
-                            font-size: 2rem;
+                            font-size: 3rem;
                         }
 
                         @media all and (max-width:360px) {
-                            font-size: 2.1rem;
+                            font-size: 3.5rem;
                         }
                     }
 

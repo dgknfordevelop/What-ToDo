@@ -55,14 +55,13 @@ html body .main-container {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  min-width: 100%;
-  min-height: 50%;
+  width: 100%;
 }
 @media all and (max-width: 615px) {
   html body .main-container {
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: 100vh;
   }
 }
 html body .main-container .counter-container {
@@ -193,7 +192,6 @@ html body .main-container .counter-container .plus-minus-container .reset-button
 }
 html body .main-container .note-container {
   width: 40vw;
-  max-height: 80vh;
   border-radius: 1.2vw;
   box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
   background-color: #ffe6ff;
@@ -221,7 +219,6 @@ html body .main-container .note-container {
 @media all and (max-width: 550px) {
   html body .main-container .note-container {
     width: 70vw;
-    min-height: 40vh;
     box-shadow: -1vw 1vw 0.5vw 0.5vw #c1c1f0;
   }
 }
@@ -305,17 +302,17 @@ html body .main-container .note-container .header-note-section .note-add-button:
 }
 @media all and (max-width: 515px) {
   html body .main-container .note-container .header-note-section .note-add-button {
-    font-size: 1.9rem;
+    font-size: 2.5rem;
   }
 }
 @media all and (max-width: 415px) {
   html body .main-container .note-container .header-note-section .note-add-button {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 @media all and (max-width: 360px) {
   html body .main-container .note-container .header-note-section .note-add-button {
-    font-size: 2.1rem;
+    font-size: 3.5rem;
   }
 }
 html body .main-container .note-container .note-entry-heading {
@@ -577,7 +574,6 @@ html body .main-container .digital-clock-container .hrs-mnts-scnds {
   html body .main-container .digital-clock-container {
     width: 20vw;
     height: 16vh;
-    font-size: 1.6rem;
   }
 }
 @media all and (max-width: 615px) {
