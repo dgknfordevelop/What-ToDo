@@ -1,4 +1,3 @@
-// let bodyWidth = document.getElementsByTagName("BODY");
 let userInput = document.querySelector(".note-input");
 let addButton = document.querySelector(".note-add-button");
 let noteSection = document.querySelector(".main-note-section");

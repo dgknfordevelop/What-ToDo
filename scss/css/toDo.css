@@ -89,16 +89,29 @@ html body .main-container .counter-clock-button-container .clock-button {
   -webkit-background-clip: text;
   color: transparent;
   cursor: pointer;
+  -webkit-animation-name: clockResize;
   animation-name: clockResize;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
 @media all and (max-width: 615px) {
   html body .main-container .counter-clock-button-container .clock-button {
     display: block;
     align-self: center;
+    -webkit-margin-start: auto;
     margin-inline-start: auto;
+  }
+  @-webkit-keyframes clockResize {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.8);
+    }
   }
   @keyframes clockResize {
     from {
@@ -125,6 +138,7 @@ html body .main-container .counter-container {
   width: 20vw;
   height: 20vh;
   font-size: 2rem;
+  -webkit-margin-start: auto;
   margin-inline-start: auto;
   border-radius: 1.2vw;
   box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
@@ -137,6 +151,7 @@ html body .main-container .counter-container .counter-number {
 html body .main-container .counter-container .plus-minus-container {
   display: flex;
   justify-content: space-around;
+  -webkit-margin-after: auto;
   margin-block-end: auto;
 }
 html body .main-container .counter-container .plus-minus-container * {
@@ -150,6 +165,8 @@ html body .main-container .counter-container .plus-minus-container *:hover {
 html body .main-container .counter-container .plus-minus-container .reset-button {
   font-size: 1.2rem;
   padding-inline: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border: 2px solid white;
   border-radius: 1.2vw;
@@ -253,6 +270,7 @@ html body .main-container .digital-clock-container-mobile {
   background-image: linear-gradient(to right, #000033, #4d004d);
   width: 20vw;
   height: 20vh;
+  -webkit-margin-start: auto;
   margin-inline-start: auto;
   border-radius: 1.2vw;
   box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
@@ -260,10 +278,12 @@ html body .main-container .digital-clock-container-mobile {
 }
 html body .main-container .digital-clock-container-mobile .hrs-mnts-scnds {
   width: 80%;
+  -webkit-padding-start: 1.2vw;
   padding-inline-start: 1.2vw;
 }
 @media all and (max-width: 890px) {
   html body .main-container .digital-clock-container-mobile .hrs-mnts-scnds {
+    -webkit-padding-start: 1.5vw;
     padding-inline-start: 1.5vw;
   }
 }
@@ -367,7 +387,9 @@ html body .main-container .note-container .header-note-section .note-input {
   width: 75%;
   height: 55%;
   font-size: 1.2rem;
+  -webkit-padding-start: 0.5vw;
   padding-inline-start: 0.5vw;
+  -webkit-margin-start: auto;
   margin-inline-start: auto;
   border-radius: 1.2vw;
   border: none;
@@ -437,6 +459,7 @@ html body .main-container .note-container .note-entry-heading {
   border-end-start-radius: 1.2vw;
   border-end-end-radius: 1.2vw;
   margin-inline: auto;
+  -webkit-margin-before: auto;
   margin-block-start: auto;
   width: 16vw;
   height: 4vh;
@@ -496,6 +519,7 @@ html body .main-container .note-container .main-note-section .note-line {
   background-color: #f2f2f2;
 }
 html body .main-container .note-container .main-note-section .note-line:first-child {
+  -webkit-margin-before: 2vh;
   margin-block-start: 2vh;
 }
 @media all and (max-width: 760px) {
@@ -524,7 +548,9 @@ html body .main-container .note-container .main-note-section .note-line .note-it
   align-items: center;
   padding-inline: 0.5vw;
   word-break: break-all;
+  -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
+  -webkit-text-decoration-color: #000033;
   text-decoration-color: #000033;
   text-decoration-thickness: 0.2rem;
 }
@@ -540,7 +566,9 @@ html body .main-container .note-container .main-note-section .note-line .note-ch
   justify-content: center;
   align-items: center;
   margin-block: 0.5vh;
+  -webkit-margin-start: auto;
   margin-inline-start: auto;
+  -webkit-margin-end: 1vw;
   margin-inline-end: 1vw;
   width: 1rem;
   height: 1rem;
@@ -565,8 +593,11 @@ html body .main-container .note-container .main-note-section .note-line .note-de
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin-block: 0.5vh;
+  -webkit-margin-end: 0.5vw;
   margin-inline-end: 0.5vw;
   cursor: pointer;
   transition-property: transform;
@@ -595,6 +626,7 @@ html body .main-container .note-container .delete-all-button {
   border-start-start-radius: 1.2vw;
   border-start-end-radius: 1.2vw;
   margin-inline: auto;
+  -webkit-margin-before: auto;
   margin-block-start: auto;
   width: 16vw;
   height: 4vh;
@@ -664,10 +696,12 @@ html body .main-container .digital-clock-container {
 }
 html body .main-container .digital-clock-container .hrs-mnts-scnds {
   width: 80%;
+  -webkit-padding-start: 1.2vw;
   padding-inline-start: 1.2vw;
 }
 @media all and (max-width: 890px) {
   html body .main-container .digital-clock-container .hrs-mnts-scnds {
+    -webkit-padding-start: 1.5vw;
     padding-inline-start: 1.5vw;
   }
 }
