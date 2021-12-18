@@ -23,7 +23,7 @@ html {
 
         .main-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: flex-start;
             width: 100%;
 
@@ -33,19 +33,22 @@ html {
                 height: 100vh;
             }
 
-            .counter-clock-button-container{
+            .counter-clock-button-container {
                 display: flex;
-                
-                @media all and (max-width:615px){
+
+                @media all and (max-width:615px) {
                     width: 35vw;
                 }
-                @media all and (max-width:515px){
+
+                @media all and (max-width:515px) {
                     width: 45vw;
                 }
-                @media all and (max-width:470px){
+
+                @media all and (max-width:470px) {
                     width: 55vw;
                 }
-                .clock-button{
+
+                .clock-button {
                     display: none;
                     font-size: 2.5rem;
                     background-image: $linear-gradient;
@@ -56,31 +59,39 @@ html {
                     animation-iteration-count: infinite;
                     animation-duration: 1s;
                     animation-direction: alternate;
-                    @media all and (max-width:615px){
-                        display:block;
+
+                    @media all and (max-width:615px) {
+                        display: block;
                         align-self: center;
                         margin-inline-start: auto;
-                        @keyframes clockResize{
-                            from{transform: scale(1)}
-                            to{transform: scale(0.8)}
+
+                        @keyframes clockResize {
+                            from {
+                                transform: scale(1)
+                            }
+
+                            to {
+                                transform: scale(0.8)
+                            }
                         }
                     }
-                    @media all and (max-width:515px){
+
+                    @media all and (max-width:515px) {
                         font-size: 3.5rem;
                     }
 
-                     &:hover{
+                    &:hover {
                         transition-property: transform;
                         transition-duration: 0.5s;
                     }
-                  
+
                 }
             }
 
             @import 'counter/counter';
             @import 'digital-clock/digitalClockTwo';
 
-            .note-container {   
+            .note-container {
                 width: 40vw;
                 border-radius: $radius;
                 box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw $box-shadow-color;
@@ -203,16 +214,20 @@ html {
                         &:first-child {
                             margin-block-start: 2vh;
                         }
+
                         @media all and (max-width:760px) {
                             font-size: 1.5rem;
                         }
+
                         @media all and (max-width:515px) {
                             margin-block: 0.5vh;
                             font-size: 2rem;
                         }
+
                         @media all and (max-width:415px) {
                             font-size: 2.5rem;
                         }
+
                         @media all and (max-width:360px) {
                             font-size: 3rem;
                         }

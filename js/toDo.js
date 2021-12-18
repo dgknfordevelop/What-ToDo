@@ -1,4 +1,4 @@
-let bodyWidth = document.getElementsByTagName("BODY");
+// let bodyWidth = document.getElementsByTagName("BODY");
 let userInput = document.querySelector(".note-input");
 let addButton = document.querySelector(".note-add-button");
 let noteSection = document.querySelector(".main-note-section");
@@ -17,14 +17,15 @@ window.addEventListener("resize", clockDisplayNone);
 function addNote() {
 
     if (userInput.value.length == 0) {
-        alert("Please write something to add a note")
+        alert("Please write something to add a note.")
 
     } else {
         noteSection.innerHTML += `<div class="note-line">
         <div class="note-item-toggleNo">${userInput.value}</div>
         <div class="note-check">
         <input type="checkbox"></div>
-        <div class="note-delete"><i class="far fa-trash-alt"></i></div></div>`
+        <div class="note-delete"><i class="far fa-trash-alt"></i></div></div>`;
+
         userInput.value = "";
 
         let checkItem = document.querySelectorAll(".note-check");
@@ -45,6 +46,7 @@ function addNote() {
         }
 
     }
+
 }
 
 function deleteSingleNote(e) {
@@ -69,15 +71,15 @@ function deleteAll() {
 }
 
 function openClock() {
-    if (clockContainerMobile.style.display == "none") {
+    if (clockContainerMobile.style.display == "flex") {
 
-        clockContainerMobile.style.display = "flex";
-        counterContainer.style.display = "none"
+        clockContainerMobile.style.display = "none";
+        counterContainer.style.display = "flex"
 
     } else {
 
-        clockContainerMobile.style.display = "none";
-        counterContainer.style.display = "flex";
+        clockContainerMobile.style.display = "flex";
+        counterContainer.style.display = "none";
     };
 
 }

@@ -53,7 +53,7 @@ html body {
 }
 html body .main-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-start;
   width: 100%;
 }
@@ -254,7 +254,6 @@ html body .main-container .digital-clock-container-mobile {
   width: 20vw;
   height: 20vh;
   margin-inline-start: auto;
-  font-size: 2.1rem;
   border-radius: 1.2vw;
   box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
   color: white;
@@ -658,7 +657,7 @@ html body .main-container .digital-clock-container {
   background-image: linear-gradient(to right, #000033, #4d004d);
   width: 20vw;
   height: 20vh;
-  font-size: 2.1rem;
+  font-size: 2rem;
   border-radius: 1.2vw;
   box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw #c1c1f0;
   color: white;
@@ -676,7 +675,7 @@ html body .main-container .digital-clock-container .hrs-mnts-scnds {
   html body .main-container .digital-clock-container {
     width: 18vw;
     height: 18vh;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 @media all and (max-width: 1000px) {
