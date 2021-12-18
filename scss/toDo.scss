@@ -33,9 +33,54 @@ html {
                 height: 100vh;
             }
 
-            @import 'counter/counter';
+            .counter-clock-button-container{
+                display: flex;
+                
+                @media all and (max-width:615px){
+                    width: 35vw;
+                }
+                @media all and (max-width:515px){
+                    width: 45vw;
+                }
+                @media all and (max-width:470px){
+                    width: 55vw;
+                }
+                .clock-button{
+                    display: none;
+                    font-size: 2.5rem;
+                    background-image: $linear-gradient;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    cursor: pointer;
+                    animation-name: clockResize;
+                    animation-iteration-count: infinite;
+                    animation-duration: 1s;
+                    animation-direction: alternate;
+                    @media all and (max-width:615px){
+                        display:block;
+                        align-self: center;
+                        margin-inline-start: auto;
+                        @keyframes clockResize{
+                            from{transform: scale(1)}
+                            to{transform: scale(0.8)}
+                        }
+                    }
+                    @media all and (max-width:515px){
+                        font-size: 3.5rem;
+                    }
 
-            .note-container {
+                     &:hover{
+                        transition-property: transform;
+                        transition-duration: 0.5s;
+                    }
+                  
+                }
+            }
+
+            @import 'counter/counter';
+            @import 'digital-clock/digitalClockTwo';
+
+            .note-container {   
                 width: 40vw;
                 border-radius: $radius;
                 box-shadow: -0.5vw 0.7vw 0.3vw 0.2vw $box-shadow-color;
@@ -50,7 +95,7 @@ html {
                     justify-content: center;
                     align-items: center;
                     width: 100%;
-                    height: 10vh;
+                    height: 11vh;
                     border-start-start-radius: $radius;
                     border-start-end-radius: $radius;
                     background-image: $linear-gradient;

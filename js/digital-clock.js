@@ -1,7 +1,6 @@
-let clockContainer = document.querySelector(".digital-clock-container");
-let hoursBox = document.querySelector(".hours");
-let minutesBox = document.querySelector(".minutes");
-let secondsBox = document.querySelector(".seconds");
+let hoursBox = document.querySelectorAll(".hours");
+let minutesBox = document.querySelectorAll(".minutes");
+let secondsBox = document.querySelectorAll(".seconds");
 
 function timeSet() {
 
@@ -10,24 +9,27 @@ function timeSet() {
     let digitalMinutes = digitalDate.getMinutes();
     let digitalSeconds = digitalDate.getSeconds();
 
+    for (let i = 0; i < hoursBox.length; i++) {
 
-    if (digitalHours >= 0 && digitalHours < 10) {
-        hoursBox.textContent = `0${digitalHours} :`;
-    } else {
-        hoursBox.textContent = `${digitalHours} :`;
-    };
+        if (digitalHours >= 0 && digitalHours < 10) {
+            hoursBox[i].textContent = `0${digitalHours} :`;
+        } else {
+            hoursBox[i].textContent = `${digitalHours} :`;
+        };
 
-    if (digitalMinutes >= 0 && digitalMinutes < 10) {
-        minutesBox.textContent = `0${digitalMinutes} :`;
-    } else {
-        minutesBox.textContent = `${digitalMinutes} :`;
-    };
+        if (digitalMinutes >= 0 && digitalMinutes < 10) {
+            minutesBox[i].textContent = `0${digitalMinutes} :`;
+        } else {
+            minutesBox[i].textContent = `${digitalMinutes} :`;
+        };
 
-    if (digitalSeconds >= 0 && digitalSeconds < 10) {
-        secondsBox.textContent = `0${digitalSeconds}`;
-    } else {
-        secondsBox.textContent = `${digitalSeconds}`;
-    };
+        if (digitalSeconds >= 0 && digitalSeconds < 10) {
+            secondsBox[i].textContent = `0${digitalSeconds}`;
+        } else {
+            secondsBox[i].textContent = `${digitalSeconds}`;
+        };
+    }
+
 
 }
 

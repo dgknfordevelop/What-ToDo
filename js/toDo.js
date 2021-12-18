@@ -1,11 +1,18 @@
+let bodyWidth = document.getElementsByTagName("BODY");
 let userInput = document.querySelector(".note-input");
 let addButton = document.querySelector(".note-add-button");
 let noteSection = document.querySelector(".main-note-section");
 let deleteAllButton = document.querySelector(".delete-all-button");
+let clockButton = document.querySelector(".clock-button");
+let clockContainerMobile = document.querySelector(".digital-clock-container-mobile");
+let counterContainer = document.querySelector(".counter-container");
+
 
 addButton.addEventListener("click", addNote);
 noteSection.addEventListener("click", deleteSingleNote);
 deleteAllButton.addEventListener("click", deleteAll);
+clockButton.addEventListener("click", openClock);
+window.addEventListener("resize", clockDisplayNone);
 
 function addNote() {
 
@@ -52,11 +59,36 @@ function deleteSingleNote(e) {
 function deleteAll() {
     if (noteSection.children.length == 0) {
         alert("There is nothing to delete.")
-        
-    } else{
+
+    } else {
         if (confirm("Do you want to delete all notes?")) {
             noteSection.innerHTML = "";
         }
     }
-   
+
+}
+
+function openClock() {
+    if (clockContainerMobile.style.display == "none") {
+
+        clockContainerMobile.style.display = "flex";
+        counterContainer.style.display = "none"
+
+    } else {
+
+        clockContainerMobile.style.display = "none";
+        counterContainer.style.display = "flex";
+    };
+
+}
+
+
+function clockDisplayNone() {
+
+    if (window.innerWidth > 615) {
+
+        clockContainerMobile.style.display = "none";
+        counterContainer.style.display = "flex";
+    }
+
 }
