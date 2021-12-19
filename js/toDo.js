@@ -19,15 +19,16 @@ function addNote() {
         alert("Please write something to add a note.")
 
     } else {
+
         noteSection.innerHTML += `<div class="note-line">
         <div class="note-item-toggleNo">${userInput.value}</div>
         <div class="note-check">
         <input type="checkbox"></div>
-        <div class="note-delete"><i class="far fa-trash-alt"></i></div></div>`;
-
+        <div class="note-delete"></div></div>`;
         userInput.value = "";
 
         let checkItem = document.querySelectorAll(".note-check");
+
         for (let i = 0; i < checkItem.length; i++) {
             checkItem[i].addEventListener("click", checkIt);
         }
@@ -39,6 +40,7 @@ function addNote() {
             if (noteItem.className == "note-item-toggleNo") {
 
                 noteItem.className = "note-item-toggleYes";
+                
             } else {
                 noteItem.className = "note-item-toggleNo";
             }
@@ -49,7 +51,7 @@ function addNote() {
 }
 
 function deleteSingleNote(e) {
-    if (e.target.className === "far fa-trash-alt") {
+    if (e.target.className === "note-delete") {
 
         if (confirm("Do you ant to delete this note?")) {
             e.target.parentElement.parentElement.remove();

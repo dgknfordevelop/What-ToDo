@@ -85,6 +85,17 @@ html {
                         transition-duration: 0.5s;
                     }
 
+                    &::before {
+                        display: inline-block;
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        content: "\f017";
+                    }
+
                 }
             }
 
@@ -300,11 +311,21 @@ html {
                             @media all and (max-width:515px) {
                                 font-size: 2rem;
                             }
+                            &::before {
+                                display: inline-block;
+                                font-style: normal;
+                                font-variant: normal;
+                                text-rendering: auto;
+                                -webkit-font-smoothing: antialiased;
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 900;
+                                content: "\f2ed";
+                            }
 
                             &:hover {
                                 transform: scale(0.9);
                             }
-
+                            
                         }
                     }
 
