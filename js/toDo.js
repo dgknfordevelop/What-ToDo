@@ -54,7 +54,7 @@ function deleteSingleNote(e) {
     if (e.target.className === "note-delete") {
 
         if (confirm("Do you ant to delete this note?")) {
-            e.target.parentElement.parentElement.remove();
+            e.target.parentElement.remove();
         }
     }
 }
