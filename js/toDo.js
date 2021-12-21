@@ -20,6 +20,7 @@ function loadFromLocalStorage() {
     noteArr = getLocalStorage();
     noteArr.forEach(function (item) {
         createNote(item);
+        checkTheNote();
     });
 }
 
@@ -46,9 +47,9 @@ function setLocalStorage(userNote) {
 function deleteLocalStorage(deleteNote) {
     noteArr = getLocalStorage();
     noteArr.forEach(function (value, index) {
-        if (value == deleteNote){
+        if (value == deleteNote) {
 
-            noteArr.splice(index,1)
+            noteArr.splice(index, 1)
         }
     });
 
@@ -82,9 +83,10 @@ function checkTheNote() {
         if (noteItem.className == "note-item-toggleNo") {
 
             noteItem.className = "note-item-toggleYes";
-
+        
         } else {
             noteItem.className = "note-item-toggleNo";
+         
         }
     }
 }
@@ -95,16 +97,18 @@ function addNote() {
 
     if (userInput.value.length == 0) {
         alert("Please write something to add a note.")
+    } else {
+
+        createNote(userInput.value);
+
+        // add note to LocalStorage
+        setLocalStorage(userInput.value);
+
+        userInput.value = "";
+
+        checkTheNote();
     }
 
-    createNote(userInput.value);
-
-    // add note to LocalStorage
-    setLocalStorage(userInput.value);
-
-    userInput.value = "";
-
-    checkTheNote();
 
 }
 
