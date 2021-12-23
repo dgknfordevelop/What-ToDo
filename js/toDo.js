@@ -92,8 +92,8 @@ function checkTheNote() {
 }
 
 
-function addNote() {
-
+function addNote(e) {
+    
 
     if (userInput.value.length == 0) {
         alert("Please write something to add a note.")
@@ -108,7 +108,7 @@ function addNote() {
 
         checkTheNote();
     }
-
+    e.preventDefault();
 
 }
 

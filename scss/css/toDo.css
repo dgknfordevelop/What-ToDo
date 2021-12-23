@@ -432,6 +432,7 @@ html body .main-container .note-container .header-note-section .note-add-button 
   justify-content: center;
   align-items: center;
   color: white;
+  border: none;
   width: 20%;
   font-size: 1.7rem;
   text-align: center;
